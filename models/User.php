@@ -225,6 +225,12 @@ class User
             . ' OFFSET ' . $offset);
 
         $i = 0;
+
+        #ПРОВЕРКА на существование
+        if(!$result){
+            header("Location: /user/online/1");
+        }
+
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $users[$i]['name'] = $row['name'];
             $users[$i]['online'] = $row['online'];
@@ -269,6 +275,13 @@ class User
             . ' OFFSET ' . $offset);
 
         $i = 0;
+
+        #ПРОВЕРКА на существование
+        if(!$result){
+            header("Location: /user/block/0");
+            exit();
+        }
+
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $users[$i]['id'] = $row['id'];
             $users[$i]['name'] = $row['name'];
@@ -316,6 +329,13 @@ class User
             . ' OFFSET ' . $offset);
 
         $i = 0;
+
+        #ПРОВЕРКА на существование
+        if(!$result){
+            header("Location: /user/delete/");
+            exit();
+        }
+
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $users[$i]['id'] = $row['id'];
             $users[$i]['name'] = $row['name'];

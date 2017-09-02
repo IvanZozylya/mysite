@@ -21,6 +21,10 @@ class CommentsNews
                 . ' OFFSET ' . $offset);
 
             $i = 0;
+            if(!$result){
+                header("Location: /news");
+                exit();
+            }
             while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 $news[$i]['id'] = $row['id'];
                 $news[$i]['date'] = $row['date'];

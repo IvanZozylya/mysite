@@ -131,5 +131,14 @@ class Forum
 
     }
 
+    //Вывод одной темы по (id и current_category_id)
+    public static function getTemaOne($id,$category)
+    {
+        $id = intval($id);
+        $db = Db::getConnection();
+        $result = $db->query("SELECT * FROM forum WHERE id = $id AND current_category_id = $category");
+        return $row = $result->fetch();
+    }
+
 
 }

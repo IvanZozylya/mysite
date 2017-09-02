@@ -21,6 +21,12 @@ class CommentsForum
                 . ' OFFSET ' . $offset);
 
             $i = 0;
+
+            #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ
+            if(!$result){
+                header("Location: /forum");
+            }
+
             while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 $commentsList[$i]['id'] = $row['id'];
                 $commentsList[$i]['date'] = $row['date'];

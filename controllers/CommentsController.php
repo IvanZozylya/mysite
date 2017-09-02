@@ -5,6 +5,13 @@ class CommentsController
     //Добавление комментариев в Новости
     public function actionAdd($id)
     {
+        #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ
+        $itemNews = News::getShowItemNews($id);
+        if($itemNews == false){
+            header("Location: /Goodbye");
+            exit();
+        }
+
         $date = date("Y-m-d H:i:s");
         $errors = false;
         // получаем идентификатор сессии,

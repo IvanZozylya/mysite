@@ -4,8 +4,14 @@
 class ForumController
 {
     //Основная страница форума
-    public function actionIndex($page = 1)
+    public function actionIndex($page = 1,$params = false)
     {
+        #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ
+        if($params == true){
+            header("Location: /forum");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "category";
         //Получаем список категорий
         $categoryList = array();
@@ -32,8 +38,21 @@ class ForumController
     }
 
     //Редактирование основной страницы форума
-    public function actionEditIndex($id)
+    public function actionEditIndex($id,$params = false)
     {
+        #ПРОВЕРКА на существование
+        $ItemCat  = Category::getCategoryItem($id);
+        if($ItemCat == false){
+            header("Location: /forum/");
+            exit();
+        }
+        
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /forum/");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "category";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();
@@ -103,8 +122,12 @@ class ForumController
     }
 
     //Добавление основой страницы форума
-    public function actionAddCategoryIndex()
+    public function actionAddCategoryIndex($params = false)
     {
+        if($params == true){
+            header("Location: /Goodbye");
+            exit();
+        }
         $_SESSION['searchPage'] = "category";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();
@@ -233,8 +256,19 @@ class ForumController
     }
 
     //Темы раздела
-    public function actionViews($categoryId, $page = 1)
+    public function actionViews($categoryId, $page = 1,$params = false)
     {
+        #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ
+        $categoryItem = Category::getCategoryItem($categoryId);
+        if($categoryItem == false){
+            header("Location: /forum");
+        }
+        #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ
+        if($params == true){
+            header("Location: /forum");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "forum";
         $_SESSION['category'] = $categoryId;
         //Получаем список тем по заданной категории
@@ -332,8 +366,22 @@ class ForumController
     }
 
     //Добавление темы роздела
-    public function actionAddTheme($categoryId)
+    public function actionAddTheme($categoryId,$params = false)
     {
+        #ПРОВЕРКА на существование
+        #Получаем все данные по заданной категории
+        $categoryLast = Category::getCategoryItem($categoryId);
+
+        //Если идентификатор категории из командной строки не найдеться в базе
+        #Делаем переадресацию на 404
+        if($categoryLast == false){
+            header("Location: /Goodbye");
+        }
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /Goodbye");
+        }
+
         $_SESSION['searchPage'] = "forum";
         $_SESSION['category'] = $categoryId;
         //Проверяем существует ли сессия,если да -возвращаем,
@@ -412,8 +460,21 @@ class ForumController
     }
 
     //Темы на форуме,комментарии + добавление комментариев
-    public function actionItem($categoryId, $category, $page = 1)
+    public function actionItem($categoryId, $category, $page = 1,$params = false)
     {
+        #ПРОВЕРКА на существование
+        //Получаем тему из url
+        $TemaItem = Forum::getTemaOne($categoryId,$category);
+        if($TemaItem == false){
+            header("Location: /forum");
+            exit();
+        }
+        #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ
+        if($params == true){
+            header("Location: /forum");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "forum";
         $errors = false;
         //Получить все комментарии по $categoryId

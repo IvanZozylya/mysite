@@ -4,8 +4,20 @@
 class CabinetController
 {
     //Страница кабинета
-    public function actionIndex($id)
+    public function actionIndex($id,$params = false)
     {
+        $us = $_SESSION['user'];
+        #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ
+        $IdUser = User::getUserById($id);
+        if ($IdUser == false) {
+            header("Location: /cabinet/$us");
+            exit();
+        }
+        if($params == true){
+            header("Location: /cabinet/$us");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "user";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();

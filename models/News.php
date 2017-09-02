@@ -40,6 +40,11 @@ class News
             . ' OFFSET ' . $offset);
 
         $i = 0;
+        //если запрос пустой ,делаем переадресацию на /news
+        if(!$result){
+            header("Location: /news");
+            exit();
+        }
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $news[$i]['id'] = $row['id'];
             $news[$i]['title'] = $row['title'];

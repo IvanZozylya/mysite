@@ -30,8 +30,20 @@ class NewsController
     }
 
     //одна новость
-    public function actionShowItem($id, $page = 1)
+    public function actionShowItem($id, $page = 1,$params = false)
     {
+        #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ
+        $ItemNews = News::getShowItemNews($id);
+        if($ItemNews == false){
+            header("Location: /news");
+            exit();
+        }
+        if($params == true){
+            header("Location: /news");
+            exit();
+        }
+
+        //Устанавливаем значение сессии = news
         $_SESSION['searchPage'] = "news";
         //получаем все данные об этой новости в newsItem
         $newsItem = array();
@@ -66,8 +78,22 @@ class NewsController
     }
 
     //Редактирование новости
-    public function actionEditNews($id)
+    public function actionEditNews($id,$params = false)
     {
+        #ПРОВЕРКА на существование
+        $ItemNews = News::getShowItemNews($id);
+        if($ItemNews == false){
+            header("Location: /news/");
+            exit();
+        }
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /news/");
+            exit();
+        }
+
+
+
         $_SESSION['searchPage'] = "news";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();

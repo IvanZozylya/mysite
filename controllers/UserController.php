@@ -3,8 +3,14 @@
 class UserController
 {
     //регистрация пользователей
-    public function actionRegister()
+    public function actionRegister($params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /user/register");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "news";
         $name = '';
         $email = '';
@@ -53,8 +59,14 @@ class UserController
     }
 
     //Авторизация пользователя
-    public function actionLogin()
+    public function actionLogin($params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /user/login");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "news";
         $email = '';
         $password = '';

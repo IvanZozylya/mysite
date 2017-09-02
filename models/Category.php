@@ -32,6 +32,11 @@ class Category
             . ' OFFSET ' . $offset);
 
         $i = 0;
+        //если запрос пустой ,делаем переадресацию на /forum
+        if(!$result){
+            header("Location: /forum");
+            exit();
+        }
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $news[$i]['id'] = $row['id'];
             $news[$i]['title'] = $row['title'];

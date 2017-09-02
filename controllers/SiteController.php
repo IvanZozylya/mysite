@@ -13,8 +13,13 @@ class SiteController
     }
 
     //страничка - Обратная связь
-    public function actionContact()
+    public function actionContact($id = false)
     {
+        #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ:
+        if ($id == true) {
+            header("Location: /contact");
+            exit();
+        }
         $_SESSION['searchPage'] = 'news';
         $userEmail = '';
         $userText = '';
@@ -53,11 +58,22 @@ class SiteController
     //404 ошибка
     public function action404()
     {
+        #УСЛОВИЯ ПЕРЕАДРЕСАЦИЙ
+        //Если сессия == user
         if ($_SESSION['searchPage'] == 'user') {
-            header("Refresh:3 url=/user/login/");
-        }else{
-            header("Refresh:2 url=/");
+            if (isset($_SESSION['user'])) {
+                $user = $_SESSION['user'];
+                header("Refresh:2 url=/cabinet/$user");
+            } else {
+                header("Refresh:2 url=/user/login");
+            }
+            //Если сессия == category
+        } elseif ($_SESSION['searchPage'] == 'category') {
+            header("Refresh:2 url=/forum");
+        } else {
+            header("Refresh:1 url=/");
         }
+
         require_once ROOT . '/views/site/404.php';
 
         return true;

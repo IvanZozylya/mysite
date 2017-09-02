@@ -3,8 +3,14 @@
 class SearchController
 {
     //Основная страница поиска
-    public function actionSearch()
+    public function actionSearch($params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /search");
+            exit();
+        }
+
         $results = false;
         $pageCategory = false;
 

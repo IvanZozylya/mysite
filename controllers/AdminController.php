@@ -3,8 +3,14 @@
 class AdminController
 {
     //страница Admin Panel
-    public function actionIndex()
+    public function actionIndex($params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /admin/");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "user";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();
@@ -24,8 +30,14 @@ class AdminController
     }
 
     //Добавление новости
-    public function actionAddNews()
+    public function actionAddNews($params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /addNews/");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "news";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();
@@ -112,8 +124,14 @@ class AdminController
     }
 
     //Добавление категории('/forum')
-    public function actionAddCategory()
+    public function actionAddCategory($params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /addCategory/");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "category";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();
@@ -202,8 +220,14 @@ class AdminController
     }
 
     //Страница ожидающая добавления категорий
-    public function actionCategoryWait()
+    public function actionCategoryWait($params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /addCategoryWait/");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "category";
 
         $result = false;
@@ -325,8 +349,14 @@ class AdminController
     }
 
 //Общая панель для выбора операций над пользователями
-    public function actionAllFunction()
+    public function actionAllFunction($params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /users/allFunctions/");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "user";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();
@@ -344,8 +374,14 @@ class AdminController
     }
 
 //Онлайн пользователи
-    public function actionOnline($categoryId, $page = 1)
+    public function actionOnline($categoryId, $page = 1,$params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /user/online/1/");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "user";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();
@@ -370,8 +406,14 @@ class AdminController
     }
 
 //Блокировка пользователей
-    public function actionBlockUsers($role, $page = 1)
+    public function actionBlockUsers($role, $page = 1,$params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /user/block/0/");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "user";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();
@@ -415,8 +457,14 @@ class AdminController
     }
 
 //Удаление пользователя
-    public function actionDeleteUser($page = 1)
+    public function actionDeleteUser($page = 1,$params = false)
     {
+        #ПРОВЕРКА на существование
+        if($params == true){
+            header("Location: /user/delete/");
+            exit();
+        }
+
         $_SESSION['searchPage'] = "user";
         // Получаем идентификатор пользователя из сессии
         $userId = User::checkLogged();

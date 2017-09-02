@@ -1,8 +1,10 @@
 <title><?php echo $title;?></title>
 <?php include_once ROOT . '/views/layouts/header.php'; ?>
+<?php if(isset($_SERVER['HTTP_REFERER'])) :?>
 <?php if($_SERVER['HTTP_REFERER'] == "http://localhost/search") :?>
     <div><a href="/search"><h4>Вернуться</h4></a></div>
 <?php endif;?>
+    <?php endif;?>
     <h2 class="btn-default alert"><img src="<?php echo $image?>" width="40" alt=""> <?php echo $title;?></h2>
 
     <div class="">
