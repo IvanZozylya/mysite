@@ -110,6 +110,16 @@ class ForumController
                 if (!empty($_FILES['userfile']['name'])) {
                     if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
 
+
+                        //Изменить название image
+                        $newname = ROOT . '/template/images/category/' . $categoryItem['id'] . '.png';
+                        //Изменяем название картинки
+                        if (rename($uploadfile, $newname)) {
+
+                            $newPath = '\'/template/images/category/' . $categoryItem['id'] . '.png\'';
+                            $newPathImage = Category::editPathImage($categoryItem['id'], $newPath);
+
+                        }
                     }
                 }
                 $result = true;

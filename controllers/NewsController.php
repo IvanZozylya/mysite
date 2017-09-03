@@ -30,15 +30,15 @@ class NewsController
     }
 
     //одна новость
-    public function actionShowItem($id, $page = 1,$params = false)
+    public function actionShowItem($id, $page = 1, $params = false)
     {
         #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ
         $ItemNews = News::getShowItemNews($id);
-        if($ItemNews == false){
+        if ($ItemNews == false) {
             header("Location: /news");
             exit();
         }
-        if($params == true){
+        if ($params == true) {
             header("Location: /news");
             exit();
         }
@@ -78,20 +78,19 @@ class NewsController
     }
 
     //Редактирование новости
-    public function actionEditNews($id,$params = false)
+    public function actionEditNews($id, $params = false)
     {
         #ПРОВЕРКА на существование
         $ItemNews = News::getShowItemNews($id);
-        if($ItemNews == false){
+        if ($ItemNews == false) {
             header("Location: /news/");
             exit();
         }
         #ПРОВЕРКА на существование
-        if($params == true){
+        if ($params == true) {
             header("Location: /news/");
             exit();
         }
-
 
 
         $_SESSION['searchPage'] = "news";
@@ -160,6 +159,20 @@ class NewsController
                 if (!empty($_FILES['userfile']['name'])) {
                     if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
 
+                        //Обработка названия image
+                        $img = basename($newsItem['image']);
+                        $imgArr = explode(".", $img);
+                        $imageArr = array_pop($imgArr);
+                        $image = strval($imageArr);
+
+                        //Изменить название image
+                        $newname = ROOT . '/template/images/news/' . $newsItem['id'] . '.'.$image;
+                        //Изменяем название картинки в файле
+                        if (rename($uploadfile, $newname)) {
+
+                            $newPath = '\'/template/images/news/' . $newsItem['id'] . '.' . $image . '\'';
+                            $newPathImage = News::editPathImage($newsItem['id'], $newPath);
+                        }
                     }
                 }
                 $result = true;
@@ -197,7 +210,7 @@ class NewsController
         //Путь к файлу image
         $imagePath = ROOT . $imageSrc;
 
-        if(!unlink($imagePath)){
+        if (!unlink($imagePath)) {
             return false;
         }
 

@@ -194,6 +194,7 @@ class AdminController
                 if ($addCategory == false) {
                     return false;
                 } else {
+                    #добавляем картинку в файл
                     if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
 
                         //Получить image и id последней категории(таблица Category)

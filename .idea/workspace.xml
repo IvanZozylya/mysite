@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b2588e3-aeb2-4cbf-821a-1cc9d668e41a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/images/category/11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/images/news/Virtus_Pro.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/images/news/enigma.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/images/news/leagoflegend.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/images/news/midone.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/images/news/pieliedie_valve.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/template/images/news/teamliquid.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cabinet/index.php" afterPath="$PROJECT_DIR$/views/cabinet/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/search/Search.php" afterPath="$PROJECT_DIR$/views/search/Search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/offlineRedactor.php" afterPath="$PROJECT_DIR$/views/site/offlineRedactor.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/AdminController.php" afterPath="$PROJECT_DIR$/controllers/AdminController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/ForumController.php" afterPath="$PROJECT_DIR$/controllers/ForumController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/NewsController.php" afterPath="$PROJECT_DIR$/controllers/NewsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forum/editIndex.php" afterPath="$PROJECT_DIR$/views/forum/editIndex.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/news/getItem.php" afterPath="$PROJECT_DIR$/views/news/getItem.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,68 +25,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="offlineRedactor.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/site/offlineRedactor.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-              <folding>
-                <element signature="e#245#513#0#PHP" expanded="false" />
-                <element signature="e#585#847#0#PHP" expanded="false" />
-                <marker date="1504468269499" expanded="true" signature="427:476" ph="UPDATE user " />
-                <marker date="1504468269499" expanded="true" signature="765:793" ph="UPDATE user " />
-                <marker date="1504468269499" expanded="true" signature="765:812" ph="UPDATE user " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/cabinet/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
-              <folding>
-                <element signature="n#script#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Search.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/search/Search.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/layouts/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="39" column="35" lean-forward="true" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/SearchController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-93">
-              <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-              <folding>
-                <element signature="e#162#253#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -92,7 +40,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/user/login.php" />
         <option value="$PROJECT_DIR$/views/admin/users/deleteUser.php" />
         <option value="$PROJECT_DIR$/views/forum/index.php" />
         <option value="$PROJECT_DIR$/views/admin/users/blockUsers.php" />
@@ -104,7 +51,6 @@
         <option value="$PROJECT_DIR$/views/cabinet/edit.php" />
         <option value="$PROJECT_DIR$/views/search/indexSearch.php" />
         <option value="$PROJECT_DIR$/views/admin/addCategoryWait.php" />
-        <option value="$PROJECT_DIR$/views/news/getItem.php" />
         <option value="$PROJECT_DIR$/views/forum/view.php" />
         <option value="$PROJECT_DIR$/views/admin/users/online.php" />
         <option value="$PROJECT_DIR$/views/404/404.php" />
@@ -125,10 +71,7 @@
         <option value="$PROJECT_DIR$/models/CommentsForum.php" />
         <option value="$PROJECT_DIR$/views/forum/item.php" />
         <option value="$PROJECT_DIR$/controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/controllers/AdminController.php" />
-        <option value="$PROJECT_DIR$/controllers/ForumController.php" />
         <option value="$PROJECT_DIR$/controllers/SiteController.php" />
-        <option value="$PROJECT_DIR$/controllers/NewsController.php" />
         <option value="$PROJECT_DIR$/models/News.php" />
         <option value="$PROJECT_DIR$/controllers/SearchController.php" />
         <option value="$PROJECT_DIR$/models/Search.php" />
@@ -143,6 +86,11 @@
         <option value="$PROJECT_DIR$/views/cabinet/index.php" />
         <option value="$PROJECT_DIR$/views/search/Search.php" />
         <option value="$PROJECT_DIR$/views/layouts/footer.php" />
+        <option value="$PROJECT_DIR$/controllers/AdminController.php" />
+        <option value="$PROJECT_DIR$/views/forum/editIndex.php" />
+        <option value="$PROJECT_DIR$/controllers/ForumController.php" />
+        <option value="$PROJECT_DIR$/controllers/NewsController.php" />
+        <option value="$PROJECT_DIR$/views/news/getItem.php" />
       </list>
     </option>
   </component>
@@ -243,7 +191,21 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="news" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="htdocs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -374,18 +336,17 @@
       <workItem from="1504323077870" duration="39796000" />
       <workItem from="1504372227705" duration="590000" />
       <workItem from="1504372843205" duration="20655000" />
-      <workItem from="1504455955043" duration="11431000" />
+      <workItem from="1504455955043" duration="17982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="342359000" />
+    <option name="totallyTimeSpent" value="348910000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18740849" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18740849" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -415,23 +376,21 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/controllers/NewsController.php</url>
+          <line>80</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/controllers/AdminController.php</url>
-          <line>114</line>
-          <option name="timeStamp" value="33" />
+          <line>99</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="40" />
+      <option name="time" value="47" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/admin/users/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
@@ -478,13 +437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/news/getItem.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -681,23 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-177">
-          <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-          <folding>
-            <element signature="n#actionIndex#0;n#AdminController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAddNews#0;n#AdminController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAddCategory#0;n#AdminController#0;n#!!top" expanded="false" />
-            <element signature="n#actionCategoryWait#0;n#AdminController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAllFunction#0;n#AdminController#0;n#!!top" expanded="false" />
-            <element signature="n#actionOnline#0;n#AdminController#0;n#!!top" expanded="false" />
-            <element signature="n#actionBlockUsers#0;n#AdminController#0;n#!!top" expanded="false" />
-            <element signature="n#actionDeleteUser#0;n#AdminController#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/SiteController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -749,44 +684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="40" />
-          <folding>
-            <element signature="n#actionShowItem#0;n#NewsController#0;n#!!top" expanded="false" />
-            <element signature="n#actionEditNews#0;n#NewsController#0;n#!!top" expanded="false" />
-            <element signature="n#actionDeleteNews#0;n#NewsController#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding>
-            <element signature="n#getCountCategoryId#0;n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#getCategoryList#0;n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#addCategory#0;n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#getCategoryItem#0;n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#editCategoryItem#0;n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#deleteCategory#0;n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#getImageCategory#0;n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#getCategoryItemLast#0;n#Category#0;n#!!top" expanded="false" />
-            <element signature="n#editPathImage#0;n#Category#0;n#!!top" expanded="false" />
-            <marker date="1504389644940" expanded="true" signature="227:266" ph="SELECT count... " />
-            <marker date="1504389644940" expanded="true" signature="663:813" ph="SELECT `id`,... category" />
-            <marker date="1504389644940" expanded="true" signature="1414:1539" ph="INSERT INTO category... " />
-            <marker date="1504389644940" expanded="true" signature="2124:2157" ph="SELECT * FRO... category" />
-            <marker date="1504389644940" expanded="true" signature="3095:3125" ph="DELETE FROM " />
-            <marker date="1504389644940" expanded="true" signature="3406:3444" ph="SELECT `imag... category" />
-            <marker date="1504389644940" expanded="true" signature="3762:3820" ph="SELECT `id`,... category" />
-            <marker date="1504389644940" expanded="true" signature="4083:4129" ph="UPDATE categ... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/forum/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
@@ -817,49 +714,6 @@
             <marker date="1504459120276" expanded="true" signature="7541:7572" ph="SELECT * FRO... ${$tableName}" />
             <marker date="1504459120276" expanded="true" signature="8009:8047" ph="SELECT * FRO... ${$tableName}" />
             <marker date="1504459120276" expanded="true" signature="8600:8644" ph="SELECT * FRO... ${$tableName}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ForumController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="6" column="58" lean-forward="false" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
-          <folding>
-            <element signature="n#actionIndex#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionEditIndex#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAddCategoryIndex#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionDeleteCategoryId#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionViews#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionEditView#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAddTheme#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="e#13010#14186#0#PHP" expanded="false" />
-            <element signature="n#actionDeleteView#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionItem#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionDeleteCommentForum#0;n#ForumController#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="n#getShowItemNews#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#getCountNewsId#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#addNews#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#editNews#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#deleteNews#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#getNewsItemLast#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#editPathImage#0;n#News#0;n#!!top" expanded="false" />
-            <marker date="1504458546934" expanded="true" signature="198:228" ph="SELECT * FRO... news" />
-            <marker date="1504458546934" expanded="true" signature="466:501" ph="SELECT count... " />
-            <marker date="1504458546934" expanded="true" signature="882:1036" ph="SELECT `id`,... news" />
-            <marker date="1504458546934" expanded="true" signature="1669:1778" ph="INSERT INTO news... " />
-            <marker date="1504458546934" expanded="true" signature="2923:2950" ph="DELETE FROM " />
-            <marker date="1504458546934" expanded="true" signature="3132:3188" ph="SELECT `id`,... news" />
-            <marker date="1504458546934" expanded="true" signature="3449:3491" ph="UPDATE news " />
           </folding>
         </state>
       </provider>
@@ -959,13 +813,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/SearchController.php">
+    <entry file="file://$PROJECT_DIR$/views/layouts/footer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
-          <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
-          <folding>
-            <element signature="e#162#253#0#PHP" expanded="false" />
-          </folding>
+        <state relative-caret-position="200">
+          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -985,11 +837,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layouts/footer.php">
+    <entry file="file://$PROJECT_DIR$/views/cabinet/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="8" column="9" lean-forward="false" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="348">
+          <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+          <folding>
+            <element signature="n#script#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/SearchController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-93">
+          <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+          <folding>
+            <element signature="e#162#253#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1007,12 +871,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cabinet/index.php">
+    <entry file="file://$PROJECT_DIR$/views/forum/editIndex.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="27" column="55" lean-forward="false" selection-start-line="27" selection-start-column="55" selection-end-line="27" selection-end-column="55" />
+        <state relative-caret-position="395">
+          <caret line="23" column="56" lean-forward="false" selection-start-line="23" selection-start-column="56" selection-end-line="23" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="113" column="27" lean-forward="false" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="27" />
           <folding>
-            <element signature="n#script#0;n#!!top" expanded="false" />
+            <element signature="n#getShowItemNews#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#getCountNewsId#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#getNews#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#addNews#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#editNews#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#deleteNews#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#getNewsItemLast#0;n#News#0;n#!!top" expanded="false" />
+            <marker date="1504458546934" expanded="true" signature="198:228" ph="SELECT * FRO... news" />
+            <marker date="1504458546934" expanded="true" signature="466:501" ph="SELECT count... " />
+            <marker date="1504458546934" expanded="true" signature="882:1036" ph="SELECT `id`,... news" />
+            <marker date="1504458546934" expanded="true" signature="1669:1778" ph="INSERT INTO news... " />
+            <marker date="1504458546934" expanded="true" signature="2923:2950" ph="DELETE FROM " />
+            <marker date="1504458546934" expanded="true" signature="3132:3188" ph="SELECT `id`,... news" />
+            <marker date="1504458546934" expanded="true" signature="3449:3491" ph="UPDATE news " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="132" column="27" lean-forward="false" selection-start-line="132" selection-start-column="27" selection-end-line="132" selection-end-column="27" />
+          <folding>
+            <element signature="n#getCountCategoryId#0;n#Category#0;n#!!top" expanded="false" />
+            <element signature="n#getCategoryList#0;n#Category#0;n#!!top" expanded="false" />
+            <element signature="n#addCategory#0;n#Category#0;n#!!top" expanded="false" />
+            <element signature="n#getCategoryItem#0;n#Category#0;n#!!top" expanded="false" />
+            <element signature="n#editCategoryItem#0;n#Category#0;n#!!top" expanded="false" />
+            <element signature="n#deleteCategory#0;n#Category#0;n#!!top" expanded="false" />
+            <element signature="n#getImageCategory#0;n#Category#0;n#!!top" expanded="false" />
+            <element signature="n#getCategoryItemLast#0;n#Category#0;n#!!top" expanded="false" />
+            <marker date="1504389644940" expanded="true" signature="227:266" ph="SELECT count... " />
+            <marker date="1504389644940" expanded="true" signature="663:813" ph="SELECT `id`,... category" />
+            <marker date="1504389644940" expanded="true" signature="1414:1539" ph="INSERT INTO category... " />
+            <marker date="1504389644940" expanded="true" signature="2124:2157" ph="SELECT * FRO... category" />
+            <marker date="1504389644940" expanded="true" signature="3095:3125" ph="DELETE FROM " />
+            <marker date="1504389644940" expanded="true" signature="3406:3444" ph="SELECT `imag... category" />
+            <marker date="1504389644940" expanded="true" signature="3762:3820" ph="SELECT `id`,... category" />
+            <marker date="1504389644940" expanded="true" signature="4083:4129" ph="UPDATE categ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/news/getItem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="175" column="21" lean-forward="true" selection-start-line="175" selection-start-column="21" selection-end-line="175" selection-end-column="21" />
+          <folding>
+            <element signature="n#actionIndex#0;n#NewsController#0;n#!!top" expanded="false" />
+            <element signature="n#actionShowItem#0;n#NewsController#0;n#!!top" expanded="false" />
+            <element signature="n#actionDeleteNews#0;n#NewsController#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ForumController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="118" column="33" lean-forward="true" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
+          <folding>
+            <element signature="n#actionIndex#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="e#1324#1417#0#PHP" expanded="false" />
+            <element signature="e#1470#1561#0#PHP" expanded="false" />
+            <element signature="n#actionAddCategoryIndex#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionDeleteCategoryId#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionViews#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionEditView#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAddTheme#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="e#13510#14686#0#PHP" expanded="false" />
+            <element signature="n#actionDeleteView#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionItem#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionDeleteCommentForum#0;n#ForumController#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="107" column="94" lean-forward="true" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="94" />
+          <folding>
+            <element signature="n#actionIndex#0;n#AdminController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAddCategory#0;n#AdminController#0;n#!!top" expanded="false" />
+            <element signature="e#4637#4742#0#PHP" expanded="false" />
+            <element signature="e#5421#5715#0#PHP" expanded="false" />
+            <element signature="e#5772#5949#0#PHP" expanded="false" />
+            <element signature="e#5993#6096#0#PHP" expanded="false" />
+            <element signature="e#6150#6267#0#PHP" expanded="false" />
+            <element signature="n#actionCategoryWait#0;n#AdminController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAllFunction#0;n#AdminController#0;n#!!top" expanded="false" />
+            <element signature="n#actionOnline#0;n#AdminController#0;n#!!top" expanded="false" />
+            <element signature="n#actionBlockUsers#0;n#AdminController#0;n#!!top" expanded="false" />
+            <element signature="n#actionDeleteUser#0;n#AdminController#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>

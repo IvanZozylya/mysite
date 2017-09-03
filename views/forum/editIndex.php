@@ -21,7 +21,7 @@
             <label for="image">Картинка: <br><img src="<?php echo $categoryItem['image']?>" id="image" width="36" height="36" alt=""></label>
             <br> <label for="">Выбрать новую картинку: </label>
             <input type="hidden" name="MAX_FILE_SIZE" value="120000" />
-            <input type="file" name="userfile"  accept="image/jpeg,image/png" id=""><br>
+            <input type="file" name="userfile"  accept="image/png" id=""><br>
             <input type="submit" name="submit" class="btn btn-success" value="Изменить" />
         </form>
     </div>
