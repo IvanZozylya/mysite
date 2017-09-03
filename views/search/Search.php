@@ -1,3 +1,4 @@
+<title>Поиск <?php echo $pageCategory;?></title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 
 <?php

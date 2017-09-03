@@ -19,7 +19,7 @@ if (isset($_POST['armagedon']) && $_POST['armagedon'] == "Ok") {
     {
         $mysqli = new mysqli("localhost", "root", "", "diplom");
         $mysqli->set_charset("utf8");
-        $result_set = $mysqli->query("UPDATE user SET `online` = 0");
+        $result_set = $mysqli->query("UPDATE user SET `online` = 0 WHERE `online` = 1");
         $mysqli->close();
     }
 
