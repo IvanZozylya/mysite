@@ -15,7 +15,15 @@ session_start();
 // 2. Подключение файлов системы
 define('ROOT', dirname(__FILE__));
 require_once(ROOT . '/components/Autoload.php');
-
+if(isset($_SESSION['user'])){
+    $userId = $_SESSION['user'];
+    $getUserAdmin = User::getUserById($userId);
+    if($userId == $getUserAdmin['id']){
+        if($getUserAdmin['online'] == 0){
+            $updateOnline = User::UserOnline($userId,1);
+        }
+    }
+}
 
 // 4. Вызов Router
 $router = new Router();

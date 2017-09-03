@@ -1,9 +1,14 @@
 <?php
 $online = User::getCountOnlineUserAll(1);
+$getUserAdmin = array();
 if(isset($_SESSION['user'])){
     $userId = $_SESSION['user'];
     $getUserAdmin = User::getUserById($userId);
 }
+//if(isset($_SESSION['user']) && ($getUserAdmin['online']) == 0){
+//    header("Location: /user/logout");
+//    exit();
+//}
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,6 +24,14 @@ if(isset($_SESSION['user'])){
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!--обновление счетчика онлайн каждые 15минут-->
+    <script>
+        var timerId = setInterval(function() {
+            $.post("/views/site/offlineRedactor.php",{armagedon:"Ok"});
+
+        }, 900000);
+    </script>
 </head>
 <body>
 
@@ -83,3 +96,5 @@ if(isset($_SESSION['user'])){
         </div>
     </div>
 </nav>
+
+
