@@ -28,35 +28,34 @@
                     <li><a href="#">Другие пользователи</a></li>
                     <li><a href="/cabinet/edit">Редактировать данные</a></li>
                 <?php endif; ?>
-
-                <?php if ($user['role'] != 1) : ?>
-                    <?php if ($userId == 13) : ?>
-
-                        <form action="" method="post">
-                            <input type="text" name="idUser" class="hidden" value="<?php echo $user['id']; ?>">
-                            <input type="submit" class="conf1" name="delete" value="Удалить">
-                        </form>
-
-                        <?php if ($user['role'] == 0) : ?>
-
-                            <form action="" method="post">
-                                <input type="text" name="idUser" class="hidden" value="<?php echo $user['id']; ?>">
-                                <input type="submit" class="conf2" name="blocked" value="Блокировать">
-                            </form>
-
-                        <?php endif; ?>
-                        <?php if ($user['role'] == 2) : ?>
-
-                            <form action="" method="post">
-                                <input type="text" name="idUser" class="hidden" value="<?php echo $user['id']; ?>">
-                                <input type="submit" class="conf3" name="active" value="Разблокировать">
-                            </form>
-
-                        <?php endif; ?>
-                    <?php endif; ?>
-                <?php endif; ?>
-            </ul>
         </div>
+        <?php if ($user['role'] != 1) : ?>
+            <?php if ($userId == 13) : ?>
+
+                <form action="" method="post" class="col-sm-1 col-sm-offset-0 padding-right">
+                    <input type="text" name="idUser" class="hidden" value="<?php echo $user['id']; ?>">
+                    <input type="submit" class="conf1" name="delete" value="Удалить">
+                </form>
+
+                <?php if ($user['role'] == 0) : ?>
+
+                    <form action="" method="post">
+                        <input type="text" name="idUser" class="hidden" value="<?php echo $user['id']; ?>">
+                        <input type="submit" class="conf2" name="blocked" value="Блокировать">
+                    </form>
+
+                <?php endif; ?>
+                <?php if ($user['role'] == 2) : ?>
+
+                    <form action="" method="post">
+                        <input type="text" name="idUser" class="hidden" value="<?php echo $user['id']; ?>">
+                        <input type="submit" class="conf3" name="active" value="Разблокировать">
+                    </form>
+
+                <?php endif; ?>
+            <?php endif; ?>
+        <?php endif; ?>
+        </ul>
     </div>
 </section>
 <script>
