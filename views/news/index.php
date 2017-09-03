@@ -1,7 +1,19 @@
 <?php include_once ROOT . "/views/layouts/header.php"; ?>
+
     <div class="text-center">
         <h1>Роздел новостей</h1>
     </div>
+
+    <div class="container">
+        <div class="row">
+            <?php if(isset($user)&&($user['role']) == 1) :?>
+                <div class="col-sm-4 col-sm-offset-11 padding-right">
+                    <a href="/addNews"><h3 class="btn btn-success">Добавить новость:</h3></a>
+                </div>
+            <?php endif;?>
+        </div>
+    </div>
+
     <div>
         <?php foreach ($newsList as $news): ?>
             <div class="btn-default">
