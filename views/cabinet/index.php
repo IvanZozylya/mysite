@@ -30,7 +30,7 @@
                         <li><a href="/admin">Admin Panel</a></li>
                     <?php endif; ?>
                     <li><a href="#">Сообщения</a></li>
-                    <li><a href="#">Другие пользователи</a></li>
+                    <li><a href="/otherUsers/">Другие пользователи</a></li>
                     <li><a href="/cabinet/edit">Редактировать данные</a></li>
                 <?php endif; ?>
         </div>

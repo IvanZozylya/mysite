@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b2588e3-aeb2-4cbf-821a-1cc9d668e41a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/SearchController.php" afterPath="$PROJECT_DIR$/controllers/SearchController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admin/users/blockUsers.php" afterPath="$PROJECT_DIR$/views/admin/users/blockUsers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/CabinetController.php" afterPath="$PROJECT_DIR$/controllers/CabinetController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/User.php" afterPath="$PROJECT_DIR$/models/User.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cabinet/index.php" afterPath="$PROJECT_DIR$/views/cabinet/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/forum/view.php" afterPath="$PROJECT_DIR$/views/forum/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layouts/header.php" afterPath="$PROJECT_DIR$/views/layouts/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/search/Search.php" afterPath="$PROJECT_DIR$/views/search/Search.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,17 +17,152 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CabinetController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CabinetController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/CabinetController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+            <state relative-caret-position="233">
+              <caret line="113" column="19" lean-forward="false" selection-start-line="113" selection-start-column="19" selection-end-line="113" selection-end-column="19" />
               <folding>
                 <element signature="n#actionIndex#0;n#CabinetController#0;n#!!top" expanded="false" />
-                <element signature="e#834#1231#0#PHP" expanded="false" />
-                <element signature="e#1278#1530#0#PHP" expanded="false" />
-                <element signature="e#1576#1831#0#PHP" expanded="false" />
+                <element signature="e#837#1234#0#PHP" expanded="false" />
+                <element signature="e#1281#1533#0#PHP" expanded="false" />
+                <element signature="e#1579#1834#0#PHP" expanded="false" />
                 <element signature="n#actionEdit#0;n#CabinetController#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/User.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="169" column="46" lean-forward="false" selection-start-line="169" selection-start-column="46" selection-end-line="169" selection-end-column="46" />
+              <folding>
+                <element signature="n#register#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#checkName#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#checkPassword#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#checkEmail#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#cleanStr#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#checkEmailExists#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#checkUserData#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#auth#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#checkLogged#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#getUserById#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#edit#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#isGuest#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#getUsers#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#UserAddCommentNews#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#UserAddCommentForum#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#UserOnline#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#getUserListByOnline#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#getCountOnlineUserAll#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#editDate#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#getUsersRole#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#getCountRoleUserAll#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#editUsersRole#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#getUsersALL#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#getCountUserId#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#deleteUserForId#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="n#identificationUsers#0;n#User#0;n#!!top" expanded="false" />
+                <element signature="e#10623#11090#0#PHP" expanded="false" />
+                <marker date="1504493535311" expanded="true" signature="205:291" ph="INSERT INTO user... " />
+                <marker date="1504493535311" expanded="true" signature="1588:1634" ph="SELECT COUNT... user" />
+                <marker date="1504493535311" expanded="true" signature="2096:2160" ph="SELECT * FRO... user" />
+                <marker date="1504493535311" expanded="true" signature="3126:3159" ph="SELECT * FRO... user" />
+                <marker date="1504493535311" expanded="true" signature="3721:3812" ph="UPDATE user " />
+                <marker date="1504493535311" expanded="true" signature="4532:4539" ph="SELECT * FRO... user" />
+                <marker date="1504493535311" expanded="true" signature="4532:4659" ph="SELECT * FRO... user" />
+                <marker date="1504493535311" expanded="true" signature="5154:5206" ph="UPDATE user " />
+                <marker date="1504493535311" expanded="true" signature="5425:5478" ph="UPDATE user " />
+                <marker date="1504493535311" expanded="true" signature="5744:5778" ph="UPDATE user " />
+                <marker date="1504493535311" expanded="true" signature="5744:5829" ph="UPDATE user " />
+                <marker date="1504493535311" expanded="true" signature="6162:6325" ph="SELECT `name... user" />
+                <marker date="1504493535311" expanded="true" signature="6918:7011" ph="SELECT count... " />
+                <marker date="1504493535311" expanded="true" signature="7337:7361" ph="UPDATE `user... " />
+                <marker date="1504493535311" expanded="true" signature="7337:7368" ph="UPDATE `user... " />
+                <marker date="1504493535311" expanded="true" signature="7337:7380" ph="UPDATE `user... " />
+                <marker date="1504493535311" expanded="true" signature="7337:7381" ph="UPDATE user " />
+                <marker date="1504493535311" expanded="true" signature="7712:7880" ph="SELECT `id`,... user" />
+                <marker date="1504493535311" expanded="true" signature="8534:8621" ph="SELECT count... " />
+                <marker date="1504493535311" expanded="true" signature="8966:8989" ph="UPDATE user " />
+                <marker date="1504493535311" expanded="true" signature="8966:8996" ph="UPDATE user " />
+                <marker date="1504493535311" expanded="true" signature="8966:9009" ph="UPDATE user " />
+                <marker date="1504493535311" expanded="true" signature="9343:9481" ph="SELECT `id`,... user" />
+                <marker date="1504493535311" expanded="true" signature="10026:10061" ph="SELECT count... " />
+                <marker date="1504493535311" expanded="true" signature="10026:10063" ph="SELECT count... " />
+                <marker date="1504493535311" expanded="true" signature="10373:10399" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForumController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/ForumController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+              <folding>
+                <element signature="n#actionEditIndex#0;n#ForumController#0;n#!!top" expanded="false" />
+                <element signature="e#1324#1417#0#PHP" expanded="false" />
+                <element signature="e#1470#1561#0#PHP" expanded="false" />
+                <element signature="n#actionAddCategoryIndex#0;n#ForumController#0;n#!!top" expanded="false" />
+                <element signature="n#actionDeleteCategoryId#0;n#ForumController#0;n#!!top" expanded="false" />
+                <element signature="n#actionViews#0;n#ForumController#0;n#!!top" expanded="false" />
+                <element signature="n#actionEditView#0;n#ForumController#0;n#!!top" expanded="false" />
+                <element signature="n#actionAddTheme#0;n#ForumController#0;n#!!top" expanded="false" />
+                <element signature="e#13510#14686#0#PHP" expanded="false" />
+                <element signature="n#actionDeleteView#0;n#ForumController#0;n#!!top" expanded="false" />
+                <element signature="n#actionItem#0;n#ForumController#0;n#!!top" expanded="false" />
+                <element signature="n#actionDeleteCommentForum#0;n#ForumController#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OtherUsers.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/cabinet/OtherUsers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NewsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/NewsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+              <folding>
+                <element signature="n#actionShowItem#0;n#NewsController#0;n#!!top" expanded="false" />
+                <element signature="n#actionEditNews#0;n#NewsController#0;n#!!top" expanded="false" />
+                <element signature="n#actionDeleteNews#0;n#NewsController#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="News.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/News.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="404">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="n#getShowItemNews#0;n#News#0;n#!!top" expanded="false" />
+                <element signature="n#addNews#0;n#News#0;n#!!top" expanded="false" />
+                <element signature="n#editNews#0;n#News#0;n#!!top" expanded="false" />
+                <element signature="n#deleteNews#0;n#News#0;n#!!top" expanded="false" />
+                <element signature="n#getNewsItemLast#0;n#News#0;n#!!top" expanded="false" />
+                <element signature="n#editPathImage#0;n#News#0;n#!!top" expanded="false" />
+                <marker date="1504458546934" expanded="true" signature="198:228" ph="SELECT * FRO... news" />
+                <marker date="1504458546934" expanded="true" signature="466:501" ph="SELECT count... " />
+                <marker date="1504458546934" expanded="true" signature="882:1036" ph="SELECT `id`,... news" />
+                <marker date="1504458546934" expanded="true" signature="1669:1778" ph="INSERT INTO news... " />
+                <marker date="1504458546934" expanded="true" signature="2923:2950" ph="DELETE FROM " />
+                <marker date="1504458546934" expanded="true" signature="3132:3188" ph="SELECT `id`,... news" />
+                <marker date="1504458546934" expanded="true" signature="3449:3491" ph="UPDATE news " />
               </folding>
             </state>
           </provider>
@@ -56,7 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/views/admin/index.php" />
         <option value="$PROJECT_DIR$/views/admin/users/addCategoryWait.php" />
         <option value="$PROJECT_DIR$/models/addCategory.php" />
         <option value="$PROJECT_DIR$/views/forum/addIndex.php" />
@@ -78,7 +209,6 @@
         <option value="$PROJECT_DIR$/models/Forum.php" />
         <option value="$PROJECT_DIR$/controllers/CommentsController.php" />
         <option value="$PROJECT_DIR$/models/Category.php" />
-        <option value="$PROJECT_DIR$/controllers/CabinetController.php" />
         <option value="$PROJECT_DIR$/models/CommentsNews.php" />
         <option value="$PROJECT_DIR$/models/CommentsForum.php" />
         <option value="$PROJECT_DIR$/views/forum/item.php" />
@@ -86,7 +216,6 @@
         <option value="$PROJECT_DIR$/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/models/News.php" />
         <option value="$PROJECT_DIR$/models/Search.php" />
-        <option value="$PROJECT_DIR$/config/routes.php" />
         <option value="$PROJECT_DIR$/views/site/index.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/views/site/test.php" />
@@ -98,15 +227,18 @@
         <option value="$PROJECT_DIR$/controllers/ForumController.php" />
         <option value="$PROJECT_DIR$/controllers/NewsController.php" />
         <option value="$PROJECT_DIR$/views/news/getItem.php" />
-        <option value="$PROJECT_DIR$/models/User.php" />
         <option value="$PROJECT_DIR$/views/forum/index.php" />
         <option value="$PROJECT_DIR$/views/news/index.php" />
         <option value="$PROJECT_DIR$/views/forum/view.php" />
         <option value="$PROJECT_DIR$/views/admin/users/blockUsers.php" />
         <option value="$PROJECT_DIR$/views/layouts/header.php" />
         <option value="$PROJECT_DIR$/controllers/SearchController.php" />
-        <option value="$PROJECT_DIR$/views/cabinet/index.php" />
         <option value="$PROJECT_DIR$/views/search/Search.php" />
+        <option value="$PROJECT_DIR$/config/routes.php" />
+        <option value="$PROJECT_DIR$/views/cabinet/index.php" />
+        <option value="$PROJECT_DIR$/views/cabinet/OtherUsers.php" />
+        <option value="$PROJECT_DIR$/models/User.php" />
+        <option value="$PROJECT_DIR$/controllers/CabinetController.php" />
       </list>
     </option>
   </component>
@@ -189,25 +321,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cabinet" />
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,12 +452,12 @@
       <workItem from="1504323077870" duration="39796000" />
       <workItem from="1504372227705" duration="590000" />
       <workItem from="1504372843205" duration="20655000" />
-      <workItem from="1504455955043" duration="28561000" />
+      <workItem from="1504455955043" duration="33107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="359489000" />
+    <option name="totallyTimeSpent" value="364035000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -394,13 +508,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/forum/addIndex.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/addCategory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -716,29 +823,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/News.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="113" column="27" lean-forward="false" selection-start-line="113" selection-start-column="27" selection-end-line="113" selection-end-column="27" />
-          <folding>
-            <element signature="n#getShowItemNews#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#getCountNewsId#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#getNews#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#addNews#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#editNews#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#deleteNews#0;n#News#0;n#!!top" expanded="false" />
-            <element signature="n#getNewsItemLast#0;n#News#0;n#!!top" expanded="false" />
-            <marker date="1504458546934" expanded="true" signature="198:228" ph="SELECT * FRO... news" />
-            <marker date="1504458546934" expanded="true" signature="466:501" ph="SELECT count... " />
-            <marker date="1504458546934" expanded="true" signature="882:1036" ph="SELECT `id`,... news" />
-            <marker date="1504458546934" expanded="true" signature="1669:1778" ph="INSERT INTO news... " />
-            <marker date="1504458546934" expanded="true" signature="2923:2950" ph="DELETE FROM " />
-            <marker date="1504458546934" expanded="true" signature="3132:3188" ph="SELECT `id`,... news" />
-            <marker date="1504458546934" expanded="true" signature="3449:3491" ph="UPDATE news " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="191">
@@ -764,18 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="80" column="56" lean-forward="false" selection-start-line="80" selection-start-column="56" selection-end-line="80" selection-end-column="56" />
-          <folding>
-            <element signature="n#actionShowItem#0;n#NewsController#0;n#!!top" expanded="false" />
-            <element signature="n#actionEditNews#0;n#NewsController#0;n#!!top" expanded="false" />
-            <element signature="n#actionDeleteNews#0;n#NewsController#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/forum/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -786,104 +858,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ForumController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="35" column="46" lean-forward="false" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
-          <folding>
-            <element signature="n#actionEditIndex#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="e#1324#1417#0#PHP" expanded="false" />
-            <element signature="e#1470#1561#0#PHP" expanded="false" />
-            <element signature="n#actionAddCategoryIndex#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionDeleteCategoryId#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionViews#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionEditView#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionAddTheme#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="e#13510#14686#0#PHP" expanded="false" />
-            <element signature="n#actionDeleteView#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionItem#0;n#ForumController#0;n#!!top" expanded="false" />
-            <element signature="n#actionDeleteCommentForum#0;n#ForumController#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="112" column="34" lean-forward="false" selection-start-line="112" selection-start-column="34" selection-end-line="112" selection-end-column="34" />
-          <folding>
-            <element signature="n#actionRegister#0;n#UserController#0;n#!!top" expanded="false" />
-            <element signature="n#actionLogin#0;n#UserController#0;n#!!top" expanded="false" />
-            <element signature="n#actionLogout#0;n#UserController#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/users/deleteUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
           <folding>
             <element signature="e#1240#1528#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="309" column="27" lean-forward="false" selection-start-line="309" selection-start-column="27" selection-end-line="309" selection-end-column="27" />
-          <folding>
-            <element signature="n#register#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#checkName#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#checkPassword#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#checkEmail#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#cleanStr#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#checkEmailExists#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#checkUserData#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#auth#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#checkLogged#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#getUserById#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#edit#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#isGuest#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#getUsers#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#UserAddCommentNews#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#UserAddCommentForum#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#UserOnline#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#getUserListByOnline#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#getCountOnlineUserAll#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#editDate#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#getUsersRole#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#getCountRoleUserAll#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#getUsersALL#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#getCountUserId#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="n#deleteUserForId#0;n#User#0;n#!!top" expanded="false" />
-            <element signature="e#10494#10961#0#PHP" expanded="false" />
-            <marker date="1504464287315" expanded="true" signature="205:291" ph="INSERT INTO user... " />
-            <marker date="1504464287315" expanded="true" signature="1588:1634" ph="SELECT COUNT... user" />
-            <marker date="1504464287315" expanded="true" signature="2096:2160" ph="SELECT * FRO... user" />
-            <marker date="1504464287315" expanded="true" signature="3126:3159" ph="SELECT * FRO... user" />
-            <marker date="1504464287315" expanded="true" signature="3721:3812" ph="UPDATE user " />
-            <marker date="1504464287315" expanded="true" signature="4436:4478" ph="SELECT id,`n... user" />
-            <marker date="1504464287315" expanded="true" signature="5020:5072" ph="UPDATE user " />
-            <marker date="1504464287315" expanded="true" signature="5291:5344" ph="UPDATE user " />
-            <marker date="1504464287315" expanded="true" signature="5610:5644" ph="UPDATE user " />
-            <marker date="1504464287315" expanded="true" signature="5610:5695" ph="UPDATE user " />
-            <marker date="1504464287315" expanded="true" signature="6028:6191" ph="SELECT `name... user" />
-            <marker date="1504464287315" expanded="true" signature="6784:6877" ph="SELECT count... " />
-            <marker date="1504464287315" expanded="true" signature="7203:7227" ph="UPDATE `user... " />
-            <marker date="1504464287315" expanded="true" signature="7203:7234" ph="UPDATE `user... " />
-            <marker date="1504464287315" expanded="true" signature="7203:7246" ph="UPDATE `user... " />
-            <marker date="1504464287315" expanded="true" signature="7203:7247" ph="UPDATE user " />
-            <marker date="1504464287315" expanded="true" signature="7578:7746" ph="SELECT `id`,... user" />
-            <marker date="1504464287315" expanded="true" signature="8400:8487" ph="SELECT count... " />
-            <marker date="1504464287315" expanded="true" signature="8832:8855" ph="UPDATE user " />
-            <marker date="1504464287315" expanded="true" signature="8832:8862" ph="UPDATE user " />
-            <marker date="1504464287315" expanded="true" signature="8832:8875" ph="UPDATE user " />
-            <marker date="1504464287315" expanded="true" signature="9205:9343" ph="SELECT `id`,... user" />
-            <marker date="1504464287315" expanded="true" signature="9897:9932" ph="SELECT count... " />
-            <marker date="1504464287315" expanded="true" signature="9897:9934" ph="SELECT count... " />
-            <marker date="1504464287315" expanded="true" signature="10244:10270" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -908,22 +888,6 @@
             <element signature="e#14562#14817#0#PHP" expanded="false" />
             <element signature="n#actionDeleteUser#0;n#AdminController#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/news/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -974,14 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cabinet/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="804">
-          <caret line="56" column="63" lean-forward="false" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/search/Search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="387">
@@ -995,17 +951,181 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ForumController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="29" column="47" lean-forward="true" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
+          <folding>
+            <element signature="n#actionEditIndex#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="e#1324#1417#0#PHP" expanded="false" />
+            <element signature="e#1470#1561#0#PHP" expanded="false" />
+            <element signature="n#actionAddCategoryIndex#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionDeleteCategoryId#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionViews#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionEditView#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionAddTheme#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="e#13510#14686#0#PHP" expanded="false" />
+            <element signature="n#actionDeleteView#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionItem#0;n#ForumController#0;n#!!top" expanded="false" />
+            <element signature="n#actionDeleteCommentForum#0;n#ForumController#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding>
+            <element signature="n#UserController#0;n#!!top" expanded="false" />
+            <element signature="n#actionRegister#0;n#UserController#0;n#!!top" expanded="false" />
+            <element signature="n#actionLogin#0;n#UserController#0;n#!!top" expanded="false" />
+            <element signature="n#actionLogout#0;n#UserController#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/news/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+          <folding>
+            <element signature="e#1581#1966#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/News.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="n#getShowItemNews#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#addNews#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#editNews#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#deleteNews#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#getNewsItemLast#0;n#News#0;n#!!top" expanded="false" />
+            <element signature="n#editPathImage#0;n#News#0;n#!!top" expanded="false" />
+            <marker date="1504458546934" expanded="true" signature="198:228" ph="SELECT * FRO... news" />
+            <marker date="1504458546934" expanded="true" signature="466:501" ph="SELECT count... " />
+            <marker date="1504458546934" expanded="true" signature="882:1036" ph="SELECT `id`,... news" />
+            <marker date="1504458546934" expanded="true" signature="1669:1778" ph="INSERT INTO news... " />
+            <marker date="1504458546934" expanded="true" signature="2923:2950" ph="DELETE FROM " />
+            <marker date="1504458546934" expanded="true" signature="3132:3188" ph="SELECT `id`,... news" />
+            <marker date="1504458546934" expanded="true" signature="3449:3491" ph="UPDATE news " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/NewsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="9" column="41" lean-forward="true" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding>
+            <element signature="n#actionShowItem#0;n#NewsController#0;n#!!top" expanded="false" />
+            <element signature="n#actionEditNews#0;n#NewsController#0;n#!!top" expanded="false" />
+            <element signature="n#actionDeleteNews#0;n#NewsController#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cabinet/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="32" column="45" lean-forward="false" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="169" column="46" lean-forward="false" selection-start-line="169" selection-start-column="46" selection-end-line="169" selection-end-column="46" />
+          <folding>
+            <element signature="n#register#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#checkName#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#checkPassword#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#checkEmail#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#cleanStr#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#checkEmailExists#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#checkUserData#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#auth#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#checkLogged#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#getUserById#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#edit#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#isGuest#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#getUsers#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#UserAddCommentNews#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#UserAddCommentForum#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#UserOnline#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#getUserListByOnline#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#getCountOnlineUserAll#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#editDate#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#getUsersRole#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#getCountRoleUserAll#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#editUsersRole#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#getUsersALL#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#getCountUserId#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#deleteUserForId#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="n#identificationUsers#0;n#User#0;n#!!top" expanded="false" />
+            <element signature="e#10623#11090#0#PHP" expanded="false" />
+            <marker date="1504493535311" expanded="true" signature="205:291" ph="INSERT INTO user... " />
+            <marker date="1504493535311" expanded="true" signature="1588:1634" ph="SELECT COUNT... user" />
+            <marker date="1504493535311" expanded="true" signature="2096:2160" ph="SELECT * FRO... user" />
+            <marker date="1504493535311" expanded="true" signature="3126:3159" ph="SELECT * FRO... user" />
+            <marker date="1504493535311" expanded="true" signature="3721:3812" ph="UPDATE user " />
+            <marker date="1504493535311" expanded="true" signature="4532:4539" ph="SELECT * FRO... user" />
+            <marker date="1504493535311" expanded="true" signature="4532:4659" ph="SELECT * FRO... user" />
+            <marker date="1504493535311" expanded="true" signature="5154:5206" ph="UPDATE user " />
+            <marker date="1504493535311" expanded="true" signature="5425:5478" ph="UPDATE user " />
+            <marker date="1504493535311" expanded="true" signature="5744:5778" ph="UPDATE user " />
+            <marker date="1504493535311" expanded="true" signature="5744:5829" ph="UPDATE user " />
+            <marker date="1504493535311" expanded="true" signature="6162:6325" ph="SELECT `name... user" />
+            <marker date="1504493535311" expanded="true" signature="6918:7011" ph="SELECT count... " />
+            <marker date="1504493535311" expanded="true" signature="7337:7361" ph="UPDATE `user... " />
+            <marker date="1504493535311" expanded="true" signature="7337:7368" ph="UPDATE `user... " />
+            <marker date="1504493535311" expanded="true" signature="7337:7380" ph="UPDATE `user... " />
+            <marker date="1504493535311" expanded="true" signature="7337:7381" ph="UPDATE user " />
+            <marker date="1504493535311" expanded="true" signature="7712:7880" ph="SELECT `id`,... user" />
+            <marker date="1504493535311" expanded="true" signature="8534:8621" ph="SELECT count... " />
+            <marker date="1504493535311" expanded="true" signature="8966:8989" ph="UPDATE user " />
+            <marker date="1504493535311" expanded="true" signature="8966:8996" ph="UPDATE user " />
+            <marker date="1504493535311" expanded="true" signature="8966:9009" ph="UPDATE user " />
+            <marker date="1504493535311" expanded="true" signature="9343:9481" ph="SELECT `id`,... user" />
+            <marker date="1504493535311" expanded="true" signature="10026:10061" ph="SELECT count... " />
+            <marker date="1504493535311" expanded="true" signature="10026:10063" ph="SELECT count... " />
+            <marker date="1504493535311" expanded="true" signature="10373:10399" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/CabinetController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="52" lean-forward="false" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        <state relative-caret-position="233">
+          <caret line="113" column="19" lean-forward="false" selection-start-line="113" selection-start-column="19" selection-end-line="113" selection-end-column="19" />
           <folding>
             <element signature="n#actionIndex#0;n#CabinetController#0;n#!!top" expanded="false" />
-            <element signature="e#834#1231#0#PHP" expanded="false" />
-            <element signature="e#1278#1530#0#PHP" expanded="false" />
-            <element signature="e#1576#1831#0#PHP" expanded="false" />
+            <element signature="e#837#1234#0#PHP" expanded="false" />
+            <element signature="e#1281#1533#0#PHP" expanded="false" />
+            <element signature="e#1579#1834#0#PHP" expanded="false" />
             <element signature="n#actionEdit#0;n#CabinetController#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/cabinet/OtherUsers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="36" lean-forward="false" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>

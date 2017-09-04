@@ -167,17 +167,24 @@ class User
     }
 
     //Получить всех пользователей
-    public static function getUsers()
+    public static function getUsers($page = 1)
     {
+        $page = intval($page);
+        $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
+
         $db = Db::getConnection();
-        $result = $db->query("SELECT id,`name`,`role`,`online` FROM user ");
+        $result = $db->query("SELECT * FROM user "
+            . "ORDER BY date DESC "
+            . "LIMIT " . self::SHOW_BY_DEFAULT
+            . ' OFFSET ' . $offset);
         $user = array();
         $i = 0;
+        if(!$result){
+            header("Location: /otherUsers/");
+            exit();
+        }
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            $user[$i]['id'] = $row['id'];
-            $user[$i]['name'] = $row['name'];
-            $user[$i]['role'] = $row['role'];
-            $user[$i]['online'] = $row['online'];
+            $user[$i] = $row;
             $i++;
         }
         return $user;
@@ -316,7 +323,7 @@ class User
         return true;
     }
 
-    //Получить абсолютно всех пользоватей + пагинация
+    //Получить всех пользоватей где role !=1  + пагинация
     public static function getUsersALL($page = 1)
     {
         $page = intval($page);
@@ -346,7 +353,7 @@ class User
 
     }
 
-    //Счетчик пользователей для страницы Удаления пользователй
+    //получаем количество записей пользователей по id
     public static function getCountUserId()
     {
         $db = Db::getConnection();
@@ -392,6 +399,9 @@ class User
             return false;
 
     }
+
+
+
 
 
 }

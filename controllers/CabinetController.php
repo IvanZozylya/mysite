@@ -4,7 +4,7 @@
 class CabinetController
 {
     //Страница кабинета
-    public function actionIndex($id,$params = false)
+    public function actionIndex($id, $params = false)
     {
         $us = $_SESSION['user'];
         #ПРОВЕРКА НА СУЩЕСТВОВАНИЕ
@@ -13,7 +13,7 @@ class CabinetController
             header("Location: /cabinet/$us");
             exit();
         }
-        if($params == true){
+        if ($params == true) {
             header("Location: /cabinet/$us");
             exit();
         }
@@ -104,6 +104,40 @@ class CabinetController
         require_once(ROOT . '/views/cabinet/edit.php');
 
         return true;
+    }
+
+    //Страница другие пользователи
+    public function actionOtherUsers($page = 1,$params = false)
+    {
+        if($params == true){
+            header("Location: /otherUsers/");
+            exit();
+        }
+        //Проверка уровня допуска
+        $identification = User::identificationUsers();
+
+        //Если пользователь не существует ,удален или забанен
+        #Переадресация на страницу авторизации
+        if ($identification == false) {
+            header("Location: /user/login/");
+            exit();
+        } else {
+
+            $_SESSION['searchPage'] = "user";
+            //вывод всех пользователей
+            $allUsers = array();
+            $allUsers = User::getUsers($page);
+
+            //Счетчик пользователей
+            $total = User::getCountUserId();
+
+            //Создаем обьект пагинатора
+            $pagination = new Pagination($total, $page, User::SHOW_BY_DEFAULT, 'page-');
+
+
+            require_once ROOT . '/views/cabinet/OtherUsers.php';
+            return true;
+        }
     }
 
 }
