@@ -1,10 +1,16 @@
 <title>Кабинет</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
-<?php if (isset($_SERVER['HTTP_REFERER'])) : ?>
+<?php if (isset($_SERVER['HTTP_REFERER'])) :?>
+
+    <?php if ($_SERVER['HTTP_REFERER'] == "http://localhost/otherUsers/") : ?>
+        <div><a href="/otherUsers/"><h4>Вернуться</h4></a></div>
+    <?php endif; ?>
+
     <?php if ($_SERVER['HTTP_REFERER'] == "http://localhost/search") : ?>
         <div><a href="/search"><h4>Вернуться</h4></a></div>
     <?php endif; ?>
 <?php endif; ?>
+
 <section>
     <div class="container">
         <div class="row">
