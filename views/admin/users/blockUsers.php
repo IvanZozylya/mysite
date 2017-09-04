@@ -1,6 +1,14 @@
 <title>Блокировка пользователей</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
+
+<?php if (isset($_SERVER['HTTP_REFERER'])) : ?>
+    <?php if ($_SERVER['HTTP_REFERER'] == "http://localhost/search") : ?>
+        <div><a href="/search"><h4>Вернуться</h4></a></div>
+    <?php endif; ?>
+<?php else: ?>
 <div><a href="/users/allFunctions/"><h4>Вернуться</h4></a></div>
+<?php endif; ?>
+
 <div class="container">
     <div class="row otstup">
         <div class="col-md-2"></div>

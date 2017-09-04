@@ -14,6 +14,8 @@ class SearchController
         $results = false;
         $pageCategory = false;
 
+        $userId = $_SESSION['user'];
+        $user = User::getUserById($userId);
         //задаем имя в конечном результате при поиске
         if ($_SESSION['searchPage'] == "news") {
             $pageCategory = "по новостям";

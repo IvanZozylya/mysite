@@ -1,5 +1,10 @@
 <title>Кабинет</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
+<?php if (isset($_SERVER['HTTP_REFERER'])) : ?>
+    <?php if ($_SERVER['HTTP_REFERER'] == "http://localhost/search") : ?>
+        <div><a href="/search"><h4>Вернуться</h4></a></div>
+    <?php endif; ?>
+<?php endif; ?>
 <section>
     <div class="container">
         <div class="row">
@@ -34,14 +39,14 @@
 
                 <form action="" method="post" class="col-sm-1 col-sm-offset-0 padding-right">
                     <input type="text" name="idUser" class="hidden" value="<?php echo $user['id']; ?>">
-                    <input type="submit" class="conf1" name="delete" value="Удалить">
+                    <input type="submit" class="btn-danger conf1" name="delete" value="Удалить">
                 </form>
 
                 <?php if ($user['role'] == 0) : ?>
 
                     <form action="" method="post">
                         <input type="text" name="idUser" class="hidden" value="<?php echo $user['id']; ?>">
-                        <input type="submit" class="conf2" name="blocked" value="Блокировать">
+                        <input type="submit" class="btn-warning conf2" name="blocked" value="Блокировать">
                     </form>
 
                 <?php endif; ?>
@@ -49,7 +54,7 @@
 
                     <form action="" method="post">
                         <input type="text" name="idUser" class="hidden" value="<?php echo $user['id']; ?>">
-                        <input type="submit" class="conf3" name="active" value="Разблокировать">
+                        <input type="submit" class="btn-success conf3" name="active" value="Разблокировать">
                     </form>
 
                 <?php endif; ?>

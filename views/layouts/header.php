@@ -50,7 +50,7 @@ if(isset($_SESSION['user'])){
             <a class="navbar-brand" href="/forum">Форум</a>
             <a class="navbar-brand" href="/contact">Связь</a>
         </div>
-            <form class="navbar-form navbar-left" role="search" action="/search" method="post">
+            <form class="navbar-form navbar-left" role="search" action="/search/" method="post">
                 <div class="form-group">
                     <input type="text" class="form-control"
                            <?php if($_SESSION['searchPage'] == "news") :?>placeholder="Поиск новости"<?php endif;?>

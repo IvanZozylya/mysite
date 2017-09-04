@@ -1,4 +1,4 @@
-<title>Поиск <?php echo $pageCategory;?></title>
+<title>Поиск <?php echo $pageCategory; ?></title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 
 <?php
@@ -21,7 +21,9 @@ if ($results === false) {
 
                 <h3>
                     <div class="btn-default"><a href="/news/<?php echo $resultNews['id']; ?>">
-                            <img src="<?php echo $resultNews['image'];?>" alt="" width="60" height="50"><?php echo $resultNews['title'];?></a></div></h3>
+                            <img src="<?php echo $resultNews['image']; ?>" alt="" width="60" height="50">
+                            <?php echo $resultNews['title']; ?></a></div>
+                </h3>
             </div>
         <?php endforeach; ?>
     <?php endif; ?>
@@ -35,9 +37,11 @@ if ($results === false) {
         <?php foreach ($results as $resultTema) : ?>
             <div class="text-center">
                 <h3>
-                    <div class="btn-default"><a href="/category/<?php echo $_SESSION['category']; ?>/item/<?php echo $resultTema['id']; ?>">
-                            <img src="<?php echo $resultTema['image'];?>" alt="" width="36" height="36"><?php echo $resultTema['title'] ?></a></div>
-                    </h3>
+                    <div class="btn-default"><a
+                                href="/category/<?php echo $_SESSION['category']; ?>/item/<?php echo $resultTema['id']; ?>">
+                            <img src="<?php echo $resultTema['image']; ?>" alt="" width="36"
+                                 height="36"><?php echo $resultTema['title'] ?></a></div>
+                </h3>
             </div>
         <?php endforeach; ?>
     <?php endif; ?>
@@ -52,8 +56,9 @@ if ($results === false) {
             <div class="text-center">
                 <h3>
                     <div class="btn-default"><a href="/category/<?php echo $resultCategory['id']; ?>">
-                            <img src="<?php echo $resultCategory['image'];?>" alt="" width="36" height="36"><?php echo $resultCategory['title'];?></a></div>
-                    </h3>
+                            <img src="<?php echo $resultCategory['image']; ?>" alt="" width="36"
+                                 height="36"><?php echo $resultCategory['title']; ?></a></div>
+                </h3>
             </div>
         <?php endforeach; ?>
     <?php endif; ?>
@@ -61,21 +66,86 @@ if ($results === false) {
 
 <!--ПОИСК по ПОЛЬЗОВАТЕЛЯМ -->
 <?php if ($_SESSION['searchPage'] == 'user') : ?>
-    <?php if (count($results) == 0) : ?>
-        <p><b>Ничего не найдено</b></p>
-    <?php elseif (count($results) > 0 && is_array($results)) : ?>
-        <?php foreach ($results as $resultUser) : ?>
-            <div class="text-center">
-                <h3>
-                    <div class="btn-default"><a href="/cabinet/<?php echo $resultUser['id']; ?>">
-                            <?php echo $resultUser['name'];?>
-                            <?php if($resultUser['online']==1)echo "<b class='btn-success'>Online</b>";?>
-                            <?php if($resultUser['online']==0)echo "<b class='btn-danger'>Offline</b>";?>
-                        </a></div>
-                    </h3>
-            </div>
-        <?php endforeach; ?>
+<?php if (count($results) == 0) : ?>
+    <p><b>Ничего не найдено</b></p>
+
+<?php elseif (count($results) > 0 && is_array($results)) : ?>
+<?php foreach ($results as $resultUser) : ?>
+
+<div class="text-center">
+    <h3>
+        <div class="btn-default"><a href="/cabinet/<?php echo $resultUser['id']; ?>">
+                <b><?php echo $resultUser['name']; ?></b>
+                <?php if ($resultUser['online'] == 1) echo "<i class='btn-success'>Online</i>"; ?>
+                <?php if ($resultUser['online'] == 0) echo "<i class='btn-danger'>Offline</i>"; ?>
+            </a></div>
+    </h3>
+    <?php if (isset($user) && ($user['role'] == 1)) : ?>
+    <?php if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == "http://localhost/user/block/0") : ?>
+        <?php if ($resultUser['role'] == 0) : ?>
+            <form action="/user/block/2/" method="post">
+                <input type="text" class="hidden" name="UserId"
+                       value="<?php echo $resultUser['id']; ?>">
+                <i><input type="submit" class="btn-warning conf2" value="Blocked" name="Blocked"></i>
+            </form>
+        <?php endif; ?>
     <?php endif; ?>
+
+    <?php if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == "http://localhost/user/block/2") : ?>
+        <?php if ($resultUser['role'] == 2) : ?>
+            <form action="/user/block/1/" method="post">
+                <input type="text" class="hidden" name="UserId"
+                       value="<?php echo $resultUser['id']; ?>">
+                <i><input type="submit" class="btn-success conf3" value="Active" name="Active"></i>
+            </form>
+        <?php endif;?>
+        <?php endif;?>
+
+    <?php if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] == "http://localhost/user/delete") : ?>
+        <?php if ($resultUser['role'] != 1) : ?>
+            <form action="/user/delete/" method="post">
+                <input type="text" class="hidden" name="UserId" value="<?php echo $resultUser['id']; ?>">
+                <i><input type="submit" class="btn-danger conf1" value="Delete" name="Delete"></i>
+            </form>
+
+            <?php endif;?>
+            <?php endif;?>
+        <?php endif; ?>
+</div>
+
+<?php endforeach; ?>
+<?php endif; ?>
 <?php endif; ?>
 
+<script>
+    $("document").ready(function () {
+        $(".conf1").click(function () {
+            var conf = confirm("Удалить пользователя?");
+            if (conf == true) {
+                alert("Пользователь был удален");
+            }
+            if (conf == false) {
+                return false;
+            }
+        });
+        $(".conf2").click(function () {
+            var conf = confirm("Заблокировать пользователя?");
+            if (conf == true) {
+                alert("Пользователь был заблокирован");
+            }
+            if (conf == false) {
+                return false;
+            }
+        });
+        $(".conf3").click(function () {
+            var conf = confirm("Разблокировать пользователя?");
+            if (conf == true) {
+                alert("Пользователь был разблокирован");
+            }
+            if (conf == false) {
+                return false;
+            }
+        });
+    });
+</script>
 <?php require_once ROOT . '/views/layouts/footer.php'; ?>

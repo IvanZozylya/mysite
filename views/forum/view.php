@@ -1,4 +1,11 @@
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
+
+<?php if (isset($_SERVER['HTTP_REFERER'])) : ?>
+    <?php if ($_SERVER['HTTP_REFERER'] == "http://localhost/search") : ?>
+        <div><a href="/search"><h4>Вернуться</h4></a></div>
+    <?php endif; ?>
+<?php endif; ?>
+
     <div class="container">
     <div class="row">
     <div class="col-sm-4 col-sm-offset-11 padding-right">
