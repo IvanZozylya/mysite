@@ -55,6 +55,12 @@ class MessageController
 
         $userId = $_SESSION['user'];
 
+        //Получаем количество новых сообщений
+        $countNew = Message::getCountUserNewMessage($userId);
+        if($countNew == 0){
+            header("Refresh:2 url=/message/");
+        }
+
         //Получаем список новых сообщений
         $newMessageList = Message::getMessageNew($userId);
 

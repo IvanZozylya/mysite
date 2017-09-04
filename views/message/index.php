@@ -1,4 +1,5 @@
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
+<div><a href="/cabinet/<?php echo $userId; ?>/"><h4>Вернуться</h4></a></div>
 <h1>Мои Сообщения</h1>
 <div class="container">
     <div class="row">
