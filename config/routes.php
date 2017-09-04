@@ -38,6 +38,10 @@ return array(
 
     'users/allFunctions' => "admin/AllFunction",
 
+    'message/view/([0-9]+)' => 'message/OneMessage/$1',
+    'message/new' => 'message/newMessage',
+    'message' => 'message/messageIndex',
+
     'otherUsers/page-([0-9]+)' => 'cabinet/otherUsers/$1',
     'otherUsers' => 'cabinet/otherUsers',
 

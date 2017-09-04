@@ -33,11 +33,11 @@
             <ul>
                 <?php if ($user['id'] == $userId) : ?>
                     <?php if ($user['role'] == 1) : ?>
-                        <li><a href="/admin">Admin Panel</a></li>
+                        <li><a href="/admin/">Admin Panel</a></li>
                     <?php endif; ?>
-                    <li><a href="#">Сообщения</a></li>
+                    <li><a href="/message/">Сообщения</a></li>
                     <li><a href="/otherUsers/">Другие пользователи</a></li>
-                    <li><a href="/cabinet/edit">Редактировать данные</a></li>
+                    <li><a href="/cabinet/edit/">Редактировать данные</a></li>
                 <?php endif; ?>
         </div>
         <?php if ($user['role'] != 1) : ?>
