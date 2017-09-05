@@ -40,7 +40,6 @@ return array(
 
     'message/incoming' => 'message/IncomingMessage',
     'message/view/([0-9]+)' => 'message/OneMessage/$1',
-    'message' => 'message/messageIndex',
 
     'otherUsers/page-([0-9]+)' => 'cabinet/otherUsers/$1',
     'otherUsers' => 'cabinet/otherUsers',

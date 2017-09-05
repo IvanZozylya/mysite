@@ -35,7 +35,7 @@
                     <?php if ($user['role'] == 1) : ?>
                         <li><a href="/admin/">Admin Panel</a></li>
                     <?php endif; ?>
-                    <li><a href="/message/">Сообщения</a></li>
+                    <li><a href="/message/incoming/">Сообщения</a></li>
                     <li><a href="/otherUsers/">Другие пользователи</a></li>
                     <li><a href="/cabinet/edit/">Редактировать данные</a></li>
                 <?php endif; ?>

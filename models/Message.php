@@ -65,18 +65,6 @@ class Message
 
     }
 
-    //Получить одно сообщение по id и  userTo
-    public static function getOneMessageItem($messageId, $userId)
-    {
-        $messageId = intval($messageId);
-        $userId = intval($userId);
-
-        $db = Db::getConnection();
-
-        $result = $db->query("SELECT * FROM message WHERE `id` = $messageId AND `userTo` = $userId");
-        return $row = $result->fetch(PDO::FETCH_ASSOC);
-    }
-
     //Отправление сообщение
     public static function goMessage($userFrom, $userTo, $text, $date)
     {
@@ -137,15 +125,20 @@ class Message
     public static function getUsersChat($userTo,$userFrom)
     {
         $userFrom = intval($userFrom);
+        $userTo = intval($userTo);
+
         $db = Db::getConnection();
-        $result = $db->query("SELECT * FROM `message` WHERE `userTo`=$userTo AND `userFrom` = '$userFrom' ".
-        " UNION "." SELECT * FROM `message` WHERE `userTo`= '$userFrom' AND `userFrom` = $userTo");
+
+        $result = $db->query("(SELECT * FROM `message` WHERE `userTo`=$userTo AND `userFrom` = '$userFrom' ORDER BY id DESC LIMIT 3) ".
+        " UNION "." (SELECT * FROM `message` WHERE `userTo`= '$userFrom' AND `userFrom` = $userTo ORDER BY id DESC LIMIT 3)");
         $i = 0;
         $message = array();
+
         while ($row = $result->fetch(PDO::FETCH_ASSOC)){
             $message[$i] = $row;
             $i++;
         }
         return $message;
     }
+
 }

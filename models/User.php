@@ -408,13 +408,6 @@ class User
         $result = $db->query("SELECT `id`,`name` FROM `user`");
 
         $i = 0;
-
-        #ПРОВЕРКА на существование
-        if (!$result) {
-            header("Location: /user/delete/");
-            exit();
-        }
-
         while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $users[$i]['id'] = $row['id'];
             $users[$i]['name'] = $row['name'];

@@ -26,6 +26,7 @@
                 <td><b>Новое Сообщение:</b></td>
                 <td><b>Когда:</b></td>
                 <td><b>От кого:</b></td>
+                <td><b>Удалить:</b></td>
             </tr>
             <?php foreach ($newMessage as $message) : ?>
                 <?php if ($message['new_message'] == 1) : ?>
@@ -44,6 +45,11 @@
                                     <?php echo $usOne['name']; ?>
                                 </td>
                             <?php endif; ?>
+                            <?php if ($usOne['id'] == $message['userFrom']) : ?>
+                                <td>
+                                    <a href="#/<?php echo $usOne['id']; ?>/">Удалить</a>
+                                </td>
+                            <?php endif; ?>
                         <?php endforeach; ?>
                     </tr>
                 <?php endif; ?>
@@ -56,9 +62,9 @@
             <td><b>Сообщение:</b></td>
             <td><b>Когда:</b></td>
             <td><b>От кого:</b></td>
+            <td><b>Удалить:</b></td>
         </tr>
-
-        <?php foreach ($newMessage as $message) : ?>
+        <?php foreach ($newMessage  as $message) : ?>
             <tr>
                 <?php if ($message['new_message'] == 0) : ?>
                     <td>
@@ -73,6 +79,11 @@
                         <?php if ($usOne['id'] == $message['userFrom']) : ?>
                             <td>
                                 <?php echo $usOne['name']; ?>
+                            </td>
+                        <?php endif; ?>
+                        <?php if ($usOne['id'] == $message['userFrom']) : ?>
+                            <td>
+                                <a href="#<?php echo $usOne['id'] ?>">Удалить</a>
                             </td>
                         <?php endif; ?>
                     <?php endforeach; ?>

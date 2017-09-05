@@ -2,36 +2,6 @@
 
 class MessageController
 {
-    //Основная страница - Сообщения
-    public function actionMessageIndex($params = false)
-    {
-        //Проверка строки
-        if ($params == true) {
-            header("Location: /message/");
-            exit();
-        }
-
-        //Проверка уровня допуска
-        $identefication = User::identificationUsers();
-        if ($identefication == false) {
-            header("Location: /user/login/");
-            exit();
-        }
-
-        $_SESSION['searchPage'] = 'user';
-
-        $userId = $_SESSION['user'];
-
-        //Получаем количество отправленных сообщений
-        $countFrom = Message::getCountFromUserMessage($userId);
-
-        //Получаем количество новых сообщений
-        $countNew = Message::getCountUserNewMessage($userId);
-
-        require_once ROOT . '/views/message/index.php';
-        return true;
-    }
-
     //Отобразить сообщение
     public function actionOneMessage($messageId)
     {
@@ -59,7 +29,7 @@ class MessageController
         });
 
         //Получаем всех пользователей
-        $users = User::getUsers();
+        $users = User::UsersAll();
 
         //Убираем статус новое сообщение
         $oldMessage = Message::getMessageOld($userId,$messageId);
@@ -81,6 +51,7 @@ class MessageController
                 $goMessage = Message::goMessage($userFrom, $userTo, $text, $data);
                 $result = true;
                 header("Refresh:1 url=/message/view/$messageId/");
+
 
             }
         }
@@ -117,9 +88,9 @@ class MessageController
             if (!isset($correction[$i])) {
                 continue;
             }
-            $newMessage[] = Message::getIncomingMessage($userId, $correction[$i]);
+            $newMessag[] = Message::getIncomingMessage($userId, $correction[$i]);
         }
-
+        $newMessage = array_reverse($newMessag);
 
         //Получаем список всех пользователей
         $users = User::UsersAll();

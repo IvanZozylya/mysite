@@ -10,7 +10,7 @@
                         <b><?php echo $users['name'] ?></b></i></a>
             </td>
             <td>
-                <b><a href="#">Написать сообщение</a></b>
+                <b><a href="/message/view/<?php echo $users['id']?>/">Написать сообщение</a></b>
             </td>
         </tr>
     <?php endforeach; ?>
