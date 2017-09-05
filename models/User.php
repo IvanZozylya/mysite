@@ -179,7 +179,7 @@ class User
             . ' OFFSET ' . $offset);
         $user = array();
         $i = 0;
-        if(!$result){
+        if (!$result) {
             header("Location: /otherUsers/");
             exit();
         }
@@ -234,7 +234,7 @@ class User
         $i = 0;
 
         #ПРОВЕРКА на существование
-        if(!$result){
+        if (!$result) {
             header("Location: /user/online/1");
         }
 
@@ -284,7 +284,7 @@ class User
         $i = 0;
 
         #ПРОВЕРКА на существование
-        if(!$result){
+        if (!$result) {
             header("Location: /user/block/0");
             exit();
         }
@@ -338,7 +338,7 @@ class User
         $i = 0;
 
         #ПРОВЕРКА на существование
-        if(!$result){
+        if (!$result) {
             header("Location: /user/delete/");
             exit();
         }
@@ -371,9 +371,9 @@ class User
         $userId = intval($userId);
         $db = Db::getConnection();
         $result = $db->query("DELETE FROM user WHERE id=" . $userId);
-        if($result){
+        if ($result) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
@@ -400,8 +400,29 @@ class User
 
     }
 
+    //Получить всех пользователей (без условий)
+    public static function UsersAll()
+    {
+        $db = Db::getConnection();
+        $users = array();
+        $result = $db->query("SELECT `id`,`name` FROM `user`");
 
+        $i = 0;
 
+        #ПРОВЕРКА на существование
+        if (!$result) {
+            header("Location: /user/delete/");
+            exit();
+        }
+
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $users[$i]['id'] = $row['id'];
+            $users[$i]['name'] = $row['name'];
+            $i++;
+        }
+
+        return $users;
+    }
 
 
 }

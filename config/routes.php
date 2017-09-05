@@ -38,6 +38,7 @@ return array(
 
     'users/allFunctions' => "admin/AllFunction",
 
+    'message/incoming' => 'message/IncomingMessage',
     'message/view/([0-9]+)' => 'message/OneMessage/$1',
     'message/new' => 'message/newMessage',
     'message' => 'message/messageIndex',

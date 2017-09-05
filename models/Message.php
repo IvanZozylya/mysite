@@ -78,7 +78,7 @@ class Message
     }
 
     //Отправление сообщение
-    public static function goMessage($userFrom,$userTo,$text,$date)
+    public static function goMessage($userFrom, $userTo, $text, $date)
     {
         $db = Db::getConnection();
 
@@ -104,4 +104,31 @@ class Message
         $result = $db->query("UPDATE message SET `new_message` = 0 WHERE `id` = $id");
     }
 
+    //Получить список Входящие сообщения
+    public static function getIncomingMessage($userId,$userFrom)
+    {
+        $userId = intval($userId);
+
+        $db = Db::getConnection();
+
+        $result = $db->query("SELECT * FROM `message` WHERE `userTo` = $userId AND `userFrom` = '$userFrom' ORDER BY `date` DESC LIMIT 1");
+        return $row = $result->fetch(PDO::FETCH_ASSOC);
+    }
+
+    //Получить все значения userFrom где userTo = $userId
+    public static function getUserFromById($userId)
+    {
+        $userId = intval($userId);
+
+        $db = Db::getConnection();
+        $result = $db->query("SELECT `userFrom` FROM `message` WHERE `userTo` = ".$userId);
+        $i = 0;
+        $userFrom = array();
+        while ($row = $result->fetch(PDO::FETCH_NUM)){
+            $userFrom[$i] = $row;
+
+            $i++;
+        }
+        return $userFrom;
+    }
 }
