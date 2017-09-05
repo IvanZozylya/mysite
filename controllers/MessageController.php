@@ -56,6 +56,13 @@ class MessageController
             }
         }
 
+        //Получаем количество отправленных сообщений
+        $countFrom = Message::getCountFromUserMessage($userId);
+
+        //Получаем количество новых сообщений
+        $countNew = Message::getCountUserNewMessage($userId);
+
+
         require_once ROOT . '/views/message/viewMessage.php';
         return true;
     }
@@ -84,6 +91,7 @@ class MessageController
         $correction = array_unique(array_reverse($usFrom));
 
         //Получить список Входящие сообщения
+        $newMessag = array();
         for ($i = 0; $i <= count($correction); $i++) {
             if (!isset($correction[$i])) {
                 continue;

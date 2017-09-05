@@ -1,6 +1,26 @@
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 <div class="container">
     <div class="row">
+        <h3 class="alert-link">Переписка с пользователем:
+            <?php foreach ($users as $us) : ?>
+                <?php if ($us['id'] == $messageId) : ?>
+                    <i><?php echo $us['name']; ?></i>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </h3>
+        <div class="col-sm-offset-0 padding-right">
+            <ul>
+                <h4>
+                    <li><a href="/cabinet/<?php echo $userId; ?>/"><h4>Моя страница</h4></a></li>
+                </h4>
+                <h4>
+                    <li><a href="/message/incoming/">Входящие(<?php echo $countNew; ?>)</a></li>
+                </h4>
+                <h4>
+                    <li><a href="">Отправленные(<?php echo $countFrom; ?>)</a></li>
+                </h4>
+            </ul>
+        </div>
         <div class="text-center">
             <?php if ($result): ?>
                 <h3>Сообщение отправлено!</h3>

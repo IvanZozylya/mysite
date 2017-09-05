@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b2588e3-aeb2-4cbf-821a-1cc9d668e41a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/views/message/index.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/MessageController.php" afterPath="$PROJECT_DIR$/controllers/MessageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Message.php" afterPath="$PROJECT_DIR$/models/Message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/User.php" afterPath="$PROJECT_DIR$/models/User.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cabinet/OtherUsers.php" afterPath="$PROJECT_DIR$/views/cabinet/OtherUsers.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cabinet/index.php" afterPath="$PROJECT_DIR$/views/cabinet/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layouts/header.php" afterPath="$PROJECT_DIR$/views/layouts/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/message/incomingMessage.php" afterPath="$PROJECT_DIR$/views/message/incomingMessage.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/message/viewMessage.php" afterPath="$PROJECT_DIR$/views/message/viewMessage.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,14 +15,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MessageController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/MessageController.php">
+      <file leaf-file-name="incomingMessage.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/message/incomingMessage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="92" column="48" lean-forward="false" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
-              <folding>
-                <element signature="n#actionOneMessage#0;n#MessageController#0;n#!!top" expanded="false" />
-              </folding>
+            <state relative-caret-position="425">
+              <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,8 +94,8 @@
         <option value="$PROJECT_DIR$/models/Message.php" />
         <option value="$PROJECT_DIR$/views/message/incomingMessage.php" />
         <option value="$PROJECT_DIR$/models/User.php" />
-        <option value="$PROJECT_DIR$/views/message/viewMessage.php" />
         <option value="$PROJECT_DIR$/controllers/MessageController.php" />
+        <option value="$PROJECT_DIR$/views/message/viewMessage.php" />
       </list>
     </option>
   </component>
@@ -208,20 +197,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="message" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="htdocs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,12 +328,12 @@
       <workItem from="1504372227705" duration="590000" />
       <workItem from="1504372843205" duration="20655000" />
       <workItem from="1504455955043" duration="53540000" />
-      <workItem from="1504586189564" duration="33031000" />
+      <workItem from="1504586189564" duration="34298000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417499000" />
+    <option name="totallyTimeSpent" value="418766000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -998,17 +973,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/message/viewMessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#label#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1504621251889" expanded="true" signature="2190:2234" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/Message.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
@@ -1059,21 +1023,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/message/incomingMessage.php">
+    <entry file="file://$PROJECT_DIR$/views/message/viewMessage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="175">
+          <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          <folding>
+            <marker date="1504622989894" expanded="true" signature="2994:3038" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/MessageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="92" column="48" lean-forward="false" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
+        <state relative-caret-position="125">
+          <caret line="5" column="47" lean-forward="false" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="47" />
           <folding>
             <element signature="n#actionOneMessage#0;n#MessageController#0;n#!!top" expanded="false" />
+            <element signature="e#1010#1601#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/message/incomingMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="17" column="10" lean-forward="true" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
