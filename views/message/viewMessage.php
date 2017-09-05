@@ -10,15 +10,9 @@
         </h3>
         <div class="col-sm-offset-0 padding-right">
             <ul>
-                <h4>
-                    <li><a href="/cabinet/<?php echo $userId; ?>/"><h4>Моя страница</h4></a></li>
-                </h4>
-                <h4>
-                    <li><a href="/message/incoming/">Входящие(<?php echo $countNew; ?>)</a></li>
-                </h4>
-                <h4>
-                    <li><a href="">Отправленные(<?php echo $countFrom; ?>)</a></li>
-                </h4>
+                <li><a href="/cabinet/<?php echo $userId; ?>/">Моя страница</a></li>
+
+                <li><a href="/message/incoming/">Входящие(<?php echo $countNew; ?>)</a></li>
             </ul>
         </div>
         <div class="text-center">

@@ -23,8 +23,8 @@ class MessageController
         $userId = $_SESSION['user'];
 
         //Получить всю переписку
-        $messageIte = Message::getUsersChat($userId,$messageId);
-        usort($messageIte, function($a, $b){
+        $messageIte = Message::getUsersChat($userId, $messageId);
+        usort($messageIte, function ($a, $b) {
             return ($a['id'] - $b['id']);
         });
 
@@ -32,7 +32,7 @@ class MessageController
         $users = User::UsersAll();
 
         //Убираем статус новое сообщение
-        $oldMessage = Message::getMessageOld($userId,$messageId);
+        $oldMessage = Message::getMessageOld($userId, $messageId);
 
         //Если нажал кнопку Ответить
         //Валидация
@@ -68,7 +68,7 @@ class MessageController
     }
 
     //Страница входящие сообщения
-    public function actionIncomingMessage()
+    public function actionIncomingMessage($page = 1)
     {
         //Проверка уровня допуска
         $identefication = User::identificationUsers();
@@ -114,6 +114,31 @@ class MessageController
 
 
         require_once ROOT . '/views/message/incomingMessage.php';
+        return true;
+    }
+
+    //Удаление чата сообщений
+    public function actiondeleteChat($id)
+    {
+        //Проверка уровня допуска
+        $identefication = User::identificationUsers();
+        if ($identefication == false) {
+            header("Location: /user/login/");
+            exit();
+        }
+
+        $_SESSION['searchPage'] = 'user';
+
+        $userId = $_SESSION['user'];
+
+        //Удаление чата
+        $deleteChat1 = Message::deleteUsersChat1($userId, $id);
+
+        if ($deleteChat1 == true) {
+            $deleteChat2 = Message::deleteUsersChat2($userId, $id);
+            header("Location: /message/incoming/");
+        }
+
         return true;
     }
 

@@ -83,7 +83,7 @@ class Message
     }
 
     //Ставим статус прочитанно
-    public static function getMessageOld($userId,$userFrom)
+    public static function getMessageOld($userId, $userFrom)
     {
         $userId = intval($userId);
         $userFrom = intval($userFrom);
@@ -94,7 +94,7 @@ class Message
     }
 
     //Получить список Входящие сообщения
-    public static function getIncomingMessage($userId,$userFrom)
+    public static function getIncomingMessage($userId, $userFrom)
     {
         $userId = intval($userId);
 
@@ -113,7 +113,7 @@ class Message
         $result = $db->query("SELECT `userFrom` FROM `message` WHERE `userTo` = $userId ORDER BY `date` DESC");
         $i = 0;
         $userFrom = array();
-        while ($row = $result->fetch(PDO::FETCH_NUM)){
+        while ($row = $result->fetch(PDO::FETCH_NUM)) {
             $userFrom[$i] = $row;
 
             $i++;
@@ -122,23 +122,56 @@ class Message
     }
 
     //Получение чата с конкретным пользователём
-    public static function getUsersChat($userTo,$userFrom)
+    public static function getUsersChat($userTo, $userFrom)
     {
         $userFrom = intval($userFrom);
         $userTo = intval($userTo);
 
         $db = Db::getConnection();
 
-        $result = $db->query("(SELECT * FROM `message` WHERE `userTo`=$userTo AND `userFrom` = '$userFrom' ORDER BY id DESC LIMIT 3) ".
-        " UNION "." (SELECT * FROM `message` WHERE `userTo`= '$userFrom' AND `userFrom` = $userTo ORDER BY id DESC LIMIT 3)");
+        $result = $db->query("(SELECT * FROM `message` WHERE `userTo`=$userTo AND `userFrom` = '$userFrom' ORDER BY id DESC LIMIT 3) " .
+            " UNION " . " (SELECT * FROM `message` WHERE `userTo`= '$userFrom' AND `userFrom` = $userTo ORDER BY id DESC LIMIT 3)");
         $i = 0;
         $message = array();
 
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)){
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $message[$i] = $row;
             $i++;
         }
         return $message;
     }
+
+    //Удаление чата сообщений
+    public static function deleteUsersChat1($userTo, $userFrom)
+    {
+        $userTo = intval($userTo);
+        $userFrom = intval($userFrom);
+
+        $db = Db::getConnection();
+
+        $result = $db->query("DELETE FROM `message` WHERE `userTo`=$userTo AND `userFrom` = $userFrom");
+
+        if (!$result) {
+            return false;
+        }
+        return true;
+    }
+
+    //Удаление чата сообщений
+    public static function deleteUsersChat2($userTo, $userFrom)
+    {
+        $userTo = intval($userTo);
+        $userFrom = intval($userFrom);
+
+        $db = Db::getConnection();
+
+        $result = $db->query("DELETE FROM `message` WHERE `userTo`= '$userFrom' AND `userFrom` = $userTo");
+
+        if (!$result) {
+            return false;
+        }
+        return true;
+    }
+
 
 }

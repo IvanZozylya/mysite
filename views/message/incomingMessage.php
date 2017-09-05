@@ -4,15 +4,11 @@
     <div class="row">
         <div class="col-sm-offset-0 padding-right">
             <ul>
-                <h4>
-                    <li><a href="/cabinet/<?php echo $userId; ?>/"><h4>Моя страница</h4></a></li>
-                </h4>
-                <h4>
-                    <li><a href="/message/incoming/">Входящие(<?php echo $countNew; ?>)</a></li>
-                </h4>
-                <h4>
-                    <li><a href="">Отправленные(<?php echo $countFrom; ?>)</a></li>
-                </h4>
+                <li><a href="/cabinet/<?php echo $userId; ?>/">Моя страница</a></li>
+
+                <li><a href="/message/incoming/">Входящие(<?php echo $countNew; ?>)</a></li>
+
+                <li><a href="">История сообщений</a></li>
             </ul>
         </div>
     </div>
@@ -47,7 +43,7 @@
                             <?php endif; ?>
                             <?php if ($usOne['id'] == $message['userFrom']) : ?>
                                 <td>
-                                    <a href="#/<?php echo $usOne['id']; ?>/">Удалить</a>
+                                    <a href="/message/deleteChat/<?php echo $usOne['id'] ?>">Удалить</a>
                                 </td>
                             <?php endif; ?>
                         <?php endforeach; ?>
@@ -64,7 +60,7 @@
             <td><b>От кого:</b></td>
             <td><b>Удалить:</b></td>
         </tr>
-        <?php foreach ($newMessage  as $message) : ?>
+        <?php foreach ($newMessage as $message) : ?>
             <tr>
                 <?php if ($message['new_message'] == 0) : ?>
                     <td>
@@ -83,7 +79,7 @@
                         <?php endif; ?>
                         <?php if ($usOne['id'] == $message['userFrom']) : ?>
                             <td>
-                                <a href="#<?php echo $usOne['id'] ?>">Удалить</a>
+                                <a href="/message/deleteChat/<?php echo $usOne['id'] ?>">Удалить</a>
                             </td>
                         <?php endif; ?>
                     <?php endforeach; ?>

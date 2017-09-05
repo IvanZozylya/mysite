@@ -38,8 +38,9 @@ return array(
 
     'users/allFunctions' => "admin/AllFunction",
 
-    'message/incoming' => 'message/IncomingMessage',
+    'message/deleteChat/([0-9]+)' => 'message/deleteChat/$1',
     'message/view/([0-9]+)' => 'message/OneMessage/$1',
+    'message/incoming' => 'message/IncomingMessage',
 
     'otherUsers/page-([0-9]+)' => 'cabinet/otherUsers/$1',
     'otherUsers' => 'cabinet/otherUsers',
