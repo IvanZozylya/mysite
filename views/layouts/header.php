@@ -29,6 +29,7 @@ if(isset($_SESSION['user'])){
     <script>
         var timerId = setInterval(function() {
             $.post("/views/site/offlineRedactor.php",{armagedon:"Ok"});
+
         }, 900000);
     </script>
 </head>

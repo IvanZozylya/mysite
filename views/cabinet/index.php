@@ -31,6 +31,9 @@
             <?php endif; ?>
 
             <ul>
+                <?php if($user['id'] !=$userId) :?>
+                    <li><a href="/message/view/<?php echo $user['id'];?>">Написать сообщение</a></li>
+                <?php endif;?>
                 <?php if ($user['id'] == $userId) : ?>
                     <?php if ($user['role'] == 1) : ?>
                         <li><a href="/admin/">Admin Panel</a></li>

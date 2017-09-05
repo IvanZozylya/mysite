@@ -42,13 +42,25 @@
                                 </label><br>
                             <?php endif; ?>
                         <?php endforeach; ?>
-                        <p><?php echo $messageItem['date']; ?></p>
+                        <p>
+                            <?php echo $messageItem['date']; ?>
+                        </p>
                         <label for="" style="color: black">
-                            <h4 <?php if ($messageItem['new_message'] == 1) : ?>
-                                class="alert-inf"
-                            <?php endif; ?>>
+                            <h4
+                                <?php if ($messageItem['new_message'] == 1) : ?>
+                                    class="alert-info"
+                                <?php endif; ?>>
                                 <?php echo $messageItem['text']; ?>
                             </h4>
+                            <p>
+                                <?php foreach ($users as $us) : ?>
+                                    <?php if ($messageItem['userFrom'] == $userId) : ?>
+                                        <?php if ($us['id'] == $messageItem['userFrom']) : ?>
+                                            <a href="/message/delete/<?php echo $messageItem['id']; ?>/<?php echo $us['id']; ?>/<?php echo $messageItem['userTo'];?>">Удалить</a>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                <?php endforeach; ?>
+                            </p>
                         </label>
                         <hr/>
                     <?php endforeach; ?>

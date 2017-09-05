@@ -38,6 +38,7 @@ return array(
 
     'users/allFunctions' => "admin/AllFunction",
 
+    'message/delete/([0-9]+)/([0-9]+)/([0-9]+)'=>'message/deleteMessage/$1/$2/$3',
     'message/deleteChat/([0-9]+)' => 'message/deleteChat/$1',
     'message/view/([0-9]+)' => 'message/OneMessage/$1',
     'message/incoming' => 'message/IncomingMessage',

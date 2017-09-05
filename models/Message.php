@@ -173,5 +173,22 @@ class Message
         return true;
     }
 
+    //Удаление сообщения
+    public static function deleteMessage($id)
+    {
+        $id = intval($id);
+
+        $db = Db::getConnection();
+
+        $result = $db->query("DELETE FROM message WHERE `id` = $id");
+
+        if(!$result){
+            header("Location: /message/incoming/");
+            exit();
+        }
+        return true;
+
+    }
+
 
 }
