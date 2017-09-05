@@ -8,9 +8,6 @@
                     <li><a href="/cabinet/<?php echo $userId; ?>/"><h4>Моя страница</h4></a></li>
                 </h4>
                 <h4>
-                    <li><a href="/message/new/">Новые(<?php echo $countNew; ?>)</a></li>
-                </h4>
-                <h4>
                     <li><a href="/message/incoming/">Входящие(<?php echo $countNew; ?>)</a></li>
                 </h4>
                 <h4>
@@ -20,25 +17,68 @@
         </div>
     </div>
 </div>
-<table border="1" class="col-sm-offset-4 padding-right">
-    <tr>
-        <td style="padding: 10px">Сообщение:</td>
-        <td>От кого:</td>
-    </tr>
-    <?php foreach ($newMessage as $message) : ?>
-        <tr>
-            <td style="padding: 10px">
-                <?php echo $message['text']; ?>
-            </td>
-            <?php foreach ($users as $usOne) :?>
-            <?php if($usOne['id'] == $message['userFrom']) :?>
-            <td>
-                <?php echo $usOne['name'];?>
-            </td>
-                <?php endif;?>
-            <?php endforeach;?>
-        </tr>
-    <?php endforeach; ?>
+<?php if ($countMessage == 0) : ?>
+    <h2 class="text-center">Для вас нет сообщений</h2>
+<?php else: ?>
+    <?php if ($countNew != 0) : ?>
+        <table class="table table-bordered">
+            <tr>
+                <td><b>Новое Сообщение:</b></td>
+                <td><b>Когда:</b></td>
+                <td><b>От кого:</b></td>
+            </tr>
+            <?php foreach ($newMessage as $message) : ?>
+                <?php if ($message['new_message'] == 1) : ?>
+                    <tr class="info">
+                        <td>
+                            <a href="/message/view/<?php echo $message['userFrom']; ?>">
+                                <?php echo $message['text']; ?>
+                            </a>
+                        </td>
+                        <td>
+                            <?php echo $message['date'] ?>
+                        </td>
+                        <?php foreach ($users as $usOne) : ?>
+                            <?php if ($usOne['id'] == $message['userFrom']) : ?>
+                                <td>
+                                    <?php echo $usOne['name']; ?>
+                                </td>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </tr>
+                <?php endif; ?>
 
-</table>
+            <?php endforeach; ?>
+        </table>
+    <?php endif; ?>
+    <table class="table table-bordered">
+        <tr>
+            <td><b>Сообщение:</b></td>
+            <td><b>Когда:</b></td>
+            <td><b>От кого:</b></td>
+        </tr>
+
+        <?php foreach ($newMessage as $message) : ?>
+            <tr>
+                <?php if ($message['new_message'] == 0) : ?>
+                    <td>
+                        <a href="/message/view/<?php echo $message['userFrom']; ?>">
+                            <?php echo $message['text']; ?>
+                        </a>
+                    </td>
+                    <td>
+                        <?php echo $message['date']; ?>
+                    </td>
+                    <?php foreach ($users as $usOne) : ?>
+                        <?php if ($usOne['id'] == $message['userFrom']) : ?>
+                            <td>
+                                <?php echo $usOne['name']; ?>
+                            </td>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </tr>
+        <?php endforeach; ?>
+    </table>
+<?php endif; ?>
 <?php require_once ROOT . '/views/layouts/footer.php'; ?>

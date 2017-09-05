@@ -53,7 +53,7 @@ class Message
         $userId = intval($userId);
 
         $db = Db::getConnection();
-        $result = $db->query("SELECT * FROM message WHERE `userTo` = $userId AND `new_message` = 1");
+        $result = $db->query("SELECT * FROM message WHERE `userTo` = $userId AND `new_message` = 1 ORDER BY `date` DESC");
         $i = 0;
         $newMessage = array();
 
@@ -95,13 +95,14 @@ class Message
     }
 
     //Ставим статус прочитанно
-    public static function getMessageOld($id)
+    public static function getMessageOld($userId,$userFrom)
     {
-        $id = intval($id);
+        $userId = intval($userId);
+        $userFrom = intval($userFrom);
 
         $db = Db::getConnection();
 
-        $result = $db->query("UPDATE message SET `new_message` = 0 WHERE `id` = $id");
+        $result = $db->query("UPDATE message SET `new_message` = 0 WHERE `userTo` = $userId AND `userFrom` = $userFrom");
     }
 
     //Получить список Входящие сообщения
@@ -121,7 +122,7 @@ class Message
         $userId = intval($userId);
 
         $db = Db::getConnection();
-        $result = $db->query("SELECT `userFrom` FROM `message` WHERE `userTo` = ".$userId);
+        $result = $db->query("SELECT `userFrom` FROM `message` WHERE `userTo` = $userId ORDER BY `date` DESC");
         $i = 0;
         $userFrom = array();
         while ($row = $result->fetch(PDO::FETCH_NUM)){
@@ -130,5 +131,21 @@ class Message
             $i++;
         }
         return $userFrom;
+    }
+
+    //Получение чата с конкретным пользователём
+    public static function getUsersChat($userTo,$userFrom)
+    {
+        $userFrom = intval($userFrom);
+        $db = Db::getConnection();
+        $result = $db->query("SELECT * FROM `message` WHERE `userTo`=$userTo AND `userFrom` = '$userFrom' ".
+        " UNION "." SELECT * FROM `message` WHERE `userTo`= '$userFrom' AND `userFrom` = $userTo");
+        $i = 0;
+        $message = array();
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)){
+            $message[$i] = $row;
+            $i++;
+        }
+        return $message;
     }
 }

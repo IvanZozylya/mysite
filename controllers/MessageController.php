@@ -32,43 +32,7 @@ class MessageController
         return true;
     }
 
-    //Страница Новые сообщения
-    public function actionNewMessage($params = false)
-    {
-        //Проверка строки
-        if ($params == true) {
-            header("Location: /message/new/");
-            exit();
-        }
-
-        //Проверка уровня допуска
-        $identefication = User::identificationUsers();
-        if ($identefication == false) {
-            header("Location: /user/login");
-            exit();
-        }
-
-        $_SESSION['searchPage'] = 'user';
-
-        $userId = $_SESSION['user'];
-
-        //Получаем количество новых сообщений
-        $countNew = Message::getCountUserNewMessage($userId);
-        if ($countNew == 0) {
-            header("Refresh:2 url=/message/");
-        }
-
-        //Получаем список новых сообщений
-        $newMessageList = Message::getMessageNew($userId);
-
-        //Получить всех пользователей
-        $users = User::UsersAll();
-
-        require_once ROOT . '/views/message/newMessage.php';
-        return true;
-    }
-
-    //Отобразить одно сообщение
+    //Отобразить сообщение
     public function actionOneMessage($messageId)
     {
         //Проверка уровня допуска
@@ -80,6 +44,7 @@ class MessageController
         $errors = false;
         $result = false;
 
+        //Установка даты
         date_default_timezone_set('Europe/Kiev');
         $date = date("Y-m-d H:i:s");
 
@@ -87,14 +52,17 @@ class MessageController
 
         $userId = $_SESSION['user'];
 
-        //Получаем нужное сообщение
-        $messageItem = Message::getOneMessageItem($messageId, $userId);
+        //Получить всю переписку
+        $messageIte = Message::getUsersChat($userId,$messageId);
+        usort($messageIte, function($a, $b){
+            return ($a['id'] - $b['id']);
+        });
 
-        //Получаем отправителя сообщения
+        //Получаем всех пользователей
         $users = User::getUsers();
 
         //Убираем статус новое сообщение
-        $oldMessage = Message::getMessageOld($messageId);
+        $oldMessage = Message::getMessageOld($userId,$messageId);
 
         //Если нажал кнопку Ответить
         //Валидация
@@ -112,7 +80,7 @@ class MessageController
             if ($errors == false) {
                 $goMessage = Message::goMessage($userFrom, $userTo, $text, $data);
                 $result = true;
-                header("Refresh:2 url=/message/");
+                header("Refresh:1 url=/message/view/$messageId/");
 
             }
         }
@@ -138,24 +106,26 @@ class MessageController
         //Получить все значения userFrom где userTo = $userId
         $usFrom = array();
         $userFrom = Message::getUserFromById($userId);
-        foreach ($userFrom as $usX){
+        foreach ($userFrom as $usX) {
             $usFrom[] = $usX[0];
         }
         //Удаляем повторяющиеся значения
         $correction = array_unique(array_reverse($usFrom));
 
-
-        print_r($correction);
         //Получить список Входящие сообщения
-        for($i = 0;$i<=count($correction);$i++){
-            if(!isset($correction[$i])){
+        for ($i = 0; $i <= count($correction); $i++) {
+            if (!isset($correction[$i])) {
                 continue;
             }
-            $newMessage[] = Message::getIncomingMessage($userId,$correction[$i]);
+            $newMessage[] = Message::getIncomingMessage($userId, $correction[$i]);
         }
+
 
         //Получаем список всех пользователей
         $users = User::UsersAll();
+
+        //Получаем количество входящий сообщений
+        $countMessage = Message::getCountUserToMessage($userId);
 
         //Получаем количество отправленных сообщений
         $countFrom = Message::getCountFromUserMessage($userId);
