@@ -38,7 +38,7 @@
                         <?php foreach ($users as $usOne) : ?>
                             <?php if ($usOne['id'] == $message['userFrom']) : ?>
                                 <td>
-                                    <?php echo $usOne['name']; ?>
+                                    <a href="/cabinet/<?php echo $usOne['id'];?>"><?php echo $usOne['name']; ?></a>
                                 </td>
                             <?php endif; ?>
                         <?php endforeach; ?>
@@ -68,7 +68,7 @@
                     <?php foreach ($users as $usOne) : ?>
                         <?php if ($usOne['id'] == $message['userFrom']) : ?>
                             <td>
-                                <?php echo $usOne['name']; ?>
+                                <a href="/cabinet/<?php echo $usOne['id'];?>"><?php echo $usOne['name']; ?></a>
                             </td>
                         <?php endif; ?>
                     <?php endforeach; ?>

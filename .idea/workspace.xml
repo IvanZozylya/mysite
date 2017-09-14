@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b2588e3-aeb2-4cbf-821a-1cc9d668e41a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.php" afterPath="$PROJECT_DIR$/config/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/MessageController.php" afterPath="$PROJECT_DIR$/controllers/MessageController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/UserController.php" afterPath="$PROJECT_DIR$/controllers/UserController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Message.php" afterPath="$PROJECT_DIR$/models/Message.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/cabinet/index.php" afterPath="$PROJECT_DIR$/views/cabinet/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/message/incomingMessage.php" afterPath="$PROJECT_DIR$/views/message/incomingMessage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/message/viewMessage.php" afterPath="$PROJECT_DIR$/views/message/viewMessage.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +14,18 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="historyMessage.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/message/historyMessage.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="75" column="109" lean-forward="true" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="109" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -86,11 +91,11 @@
         <option value="$PROJECT_DIR$/views/message/viewMessage.php" />
         <option value="$PROJECT_DIR$/config/routes.php" />
         <option value="$PROJECT_DIR$/views/message/historyMessage.php" />
-        <option value="$PROJECT_DIR$/views/message/incomingMessage.php" />
         <option value="$PROJECT_DIR$/controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/controllers/MessageController.php" />
         <option value="$PROJECT_DIR$/models/Message.php" />
         <option value="$PROJECT_DIR$/views/cabinet/index.php" />
+        <option value="$PROJECT_DIR$/controllers/MessageController.php" />
+        <option value="$PROJECT_DIR$/views/message/incomingMessage.php" />
       </list>
     </option>
   </component>
@@ -163,7 +168,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="cabinet" />
+              <option name="myItemId" value="message" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -324,17 +329,18 @@
       <workItem from="1504372843205" duration="20655000" />
       <workItem from="1504455955043" duration="53540000" />
       <workItem from="1504586189564" duration="46701000" />
-      <workItem from="1505377013506" duration="12577000" />
+      <workItem from="1505377013506" duration="12989000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="443746000" />
+    <option name="totallyTimeSpent" value="444158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18740849" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18740849" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -848,16 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/message/viewMessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1375">
-          <caret line="55" column="29" lean-forward="true" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
-          <folding>
-            <marker date="1505383198750" expanded="true" signature="2860:2904" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/layouts/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="395">
@@ -904,29 +900,6 @@
           <folding>
             <element signature="n#actionRegister#0;n#UserController#0;n#!!top" expanded="false" />
             <element signature="n#actionLogin#0;n#UserController#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/message/historyMessage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1425">
-          <caret line="57" column="52" lean-forward="true" selection-start-line="57" selection-start-column="52" selection-end-line="57" selection-end-column="52" />
-          <folding>
-            <marker date="1505391121101" expanded="true" signature="1145:1452" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="1162:1300" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="1378:1452" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="1403:1452" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="1514:1563" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="1768:1803" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="2112:2173" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="2315:2625" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="2332:2473" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="2551:2625" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="2576:2625" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="2687:2736" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="2943:3038" ph="..." />
-            <marker date="1505391121101" expanded="true" signature="3287:3348" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1006,32 +979,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/message/incomingMessage.php">
+    <entry file="file://$PROJECT_DIR$/views/cabinet/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state relative-caret-position="519">
+          <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/MessageController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="199" column="1" lean-forward="true" selection-start-line="199" selection-start-column="1" selection-end-line="199" selection-end-column="1" />
+        <state relative-caret-position="10">
+          <caret line="167" column="42" lean-forward="false" selection-start-line="167" selection-start-column="42" selection-end-line="167" selection-end-column="42" />
           <folding>
             <element signature="n#actionOneMessage#0;n#MessageController#0;n#!!top" expanded="false" />
             <element signature="n#actionIncomingMessage#0;n#MessageController#0;n#!!top" expanded="false" />
-            <element signature="n#actionMessageHistory#0;n#MessageController#0;n#!!top" expanded="false" />
             <element signature="e#4515#4868#0#PHP" expanded="false" />
-            <element signature="e#4878#5782#0#PHP" expanded="false" />
+            <element signature="e#4921#5825#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/cabinet/index.php">
+    <entry file="file://$PROJECT_DIR$/views/message/viewMessage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="519">
-          <caret line="46" column="41" lean-forward="true" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
+        <state relative-caret-position="1323">
+          <caret line="55" column="29" lean-forward="true" selection-start-line="55" selection-start-column="29" selection-end-line="55" selection-end-column="29" />
+          <folding>
+            <marker date="1505383198750" expanded="true" signature="2860:2904" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/message/incomingMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="43" column="44" lean-forward="true" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/message/historyMessage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="75" column="109" lean-forward="true" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="109" />
           <folding />
         </state>
       </provider>
