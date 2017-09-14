@@ -52,15 +52,6 @@
                                 <?php endif; ?>>
                                 <?php echo $messageItem['text']; ?>
                             </h4>
-                            <p>
-                                <?php foreach ($users as $us) : ?>
-                                    <?php if ($messageItem['userFrom'] == $userId) : ?>
-                                        <?php if ($us['id'] == $messageItem['userFrom']) : ?>
-                                            <a href="/message/delete/<?php echo $messageItem['id']; ?>/<?php echo $us['id']; ?>/<?php echo $messageItem['userTo'];?>">Удалить</a>
-                                        <?php endif; ?>
-                                    <?php endif; ?>
-                                <?php endforeach; ?>
-                            </p>
                         </label>
                         <hr/>
                     <?php endforeach; ?>

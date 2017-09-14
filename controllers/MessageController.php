@@ -3,7 +3,7 @@
 class MessageController
 {
     //Отобразить сообщение
-    public function actionOneMessage($messageId,$params = false)
+    public function actionOneMessage($messageId, $params = false)
     {
         //Проверка уровня допуска
         $identefication = User::identificationUsers();
@@ -13,7 +13,7 @@ class MessageController
         }
 
         //Валидация строки
-        if($params == true){
+        if ($params == true) {
             header("Location: /message/view/$messageId/");
             exit();
         }
@@ -85,7 +85,7 @@ class MessageController
         }
 
         //Валидация входящей строки
-        if($params == true){
+        if ($params == true) {
             header("Location: /message/incoming/");
             exit();
         }
@@ -131,8 +131,8 @@ class MessageController
         return true;
     }
 
-    //Удаление чата сообщений
-    public function actiondeleteChat($id)
+    //Страница истории сообщений
+    public function actionMessageHistory($page = 1)
     {
         //Проверка уровня допуска
         $identefication = User::identificationUsers();
@@ -140,60 +140,61 @@ class MessageController
             header("Location: /user/login/");
             exit();
         }
-
         $_SESSION['searchPage'] = 'user';
 
         $userId = $_SESSION['user'];
-
-        //Удаление чата
-        $deleteChat1 = Message::deleteUsersChat1($userId, $id);
-
-        if ($deleteChat1 == true) {
-            $deleteChat2 = Message::deleteUsersChat2($userId, $id);
-            header("Location: /message/incoming/");
+        if(!isset($_SESSION['message'])){
+            $_SESSION['message'] = 'incoming';
         }
 
+        //Получаем список всех пользователей
+        $users = User::UsersAll();
+
+        //Получение всех входящий сообщений для конкретного пользователя
+        $message = array();
+
+        //Валидация
+        if (isset($_POST['submit'])) {
+            if ($_POST['message'] == 1) {
+                $_SESSION['message'] = 'incoming';
+                header("Location: /message/history/");
+
+            } elseif ($_POST['message'] == 2) {
+                $_SESSION['message'] = 'send';
+                header("Location: /message/history/");
+            }
+        }
+
+        if ($_SESSION['message'] == 'incoming') {
+
+            //Получение всех входящий сообщений для конкретного пользователя
+            $message = Message::getIncomingMessageUser($userId, $page);
+
+            //Получить количество входящих сообщений
+            $total = Message::getCountUserToMessage($userId);
+
+            //Создаем обьект пагинатора
+            $pagination = new Pagination($total, $page, Message::SHOW_BY_DEFAULT, 'page-');
+
+        } elseif ($_SESSION['message'] == 'send') {
+
+            //Получение всех отправленых сообщений конкретного пользователя
+            $message = Message::getSendMessageUser($userId, $page);
+
+            //Получить количество отправленных сообщений
+            $total = Message::getCountFromUserMessage($userId);
+
+            //Создаем обьект пагинатора
+            $pagination = new Pagination($total, $page, Message::SHOW_BY_DEFAULT, 'page-');
+
+        }
+
+        //Получаем количество новых сообщений
+        $countNew = Message::getCountUserNewMessage($userId);
+
+        require_once ROOT . '/views/message/historyMessage.php';
         return true;
-    }
-
-    //Удаление сообщения
-    public function actiondeleteMessage($id, $idUser, $chatId)
-    {
-        //Проверка уровня допуска
-        $identefication = User::identificationUsers();
-        if ($identefication == false) {
-            header("Location: /user/login/");
-            exit();
-        }
-        $userId = $_SESSION['user'];
-
-        //Делаем валидацию входних данных
-        if ($idUser != $userId) {
-            header("Location: /message/incoming/");
-            exit();
-        }
-
-        $_SESSION['searchPage'] = 'user';
-
-
-        //Удаление сообщения
-        $deleteMessage = Message::deleteMessage($id);
-
-        //если ошибка
-        if (!$deleteMessage) {
-            header("Location: /message/view/$chatId");
-            exit();
-
-        }
-
-        //Если все ок Делаем переадресацию
-        if ($deleteMessage) {
-            header("Location: /message/view/$chatId");
-            return true;
-
-        }
 
     }
-
 
 }

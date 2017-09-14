@@ -42,6 +42,8 @@ return array(
     'message/deleteChat/([0-9]+)' => 'message/deleteChat/$1',
     'message/view/([0-9]+)' => 'message/OneMessage/$1',
     'message/incoming' => 'message/IncomingMessage',
+    'message/history/page-([0-9]+)'=>'message/messageHistory/$1',
+    'message/history'=>'message/messageHistory',
 
     'otherUsers/page-([0-9]+)' => 'cabinet/otherUsers/$1',
     'otherUsers' => 'cabinet/otherUsers',

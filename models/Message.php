@@ -2,6 +2,8 @@
 
 class Message
 {
+    const SHOW_BY_DEFAULT = 10;
+
     //Счетчик отправленных сообщений по userFrom
     public static function getCountFromUserMessage($userId)
     {
@@ -93,7 +95,7 @@ class Message
         $result = $db->query("UPDATE message SET `new_message` = 0 WHERE `userTo` = $userId AND `userFrom` = $userFrom");
     }
 
-    //Получить список Входящие сообщения
+    //Получить чат Входящие сообщения
     public static function getIncomingMessage($userId, $userFrom)
     {
         $userId = intval($userId);
@@ -141,53 +143,56 @@ class Message
         return $message;
     }
 
-    //Удаление чата сообщений
-    public static function deleteUsersChat1($userTo, $userFrom)
+    //Получить список всех входящий сообщений для одного пользователя
+    public static function getIncomingMessageUser($userId,$page = 1)
     {
-        $userTo = intval($userTo);
-        $userFrom = intval($userFrom);
+        $userId = intval($userId);
+
+        $page = intval($page);
+        $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
 
         $db = Db::getConnection();
 
-        $result = $db->query("DELETE FROM `message` WHERE `userTo`=$userTo AND `userFrom` = $userFrom");
-
+        $result = $db->query("SELECT * FROM message WHERE `userTo` = $userId "
+            . "ORDER BY date DESC "
+            . "LIMIT " . self::SHOW_BY_DEFAULT
+            . ' OFFSET ' . $offset);
         if (!$result) {
-            return false;
+            header("Location: /message/history/");
         }
-        return true;
+        $messageList = array();
+        $i = 0;
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $messageList[$i] = $row;
+            $i++;
+        }
+        return $messageList;
     }
 
-    //Удаление чата сообщений
-    public static function deleteUsersChat2($userTo, $userFrom)
+    //Получить список всех отправленных сообщений одного пользователя
+    public static function getSendMessageUser($userId,$page = 1)
     {
-        $userTo = intval($userTo);
-        $userFrom = intval($userFrom);
+        $userId = intval($userId);
+
+        $page = intval($page);
+        $offset = ($page - 1) * self::SHOW_BY_DEFAULT;
 
         $db = Db::getConnection();
 
-        $result = $db->query("DELETE FROM `message` WHERE `userTo`= '$userFrom' AND `userFrom` = $userTo");
-
+        $result = $db->query("SELECT * FROM message WHERE `userFrom` = $userId "
+            . "ORDER BY date DESC "
+            . "LIMIT " . self::SHOW_BY_DEFAULT
+            . ' OFFSET ' . $offset);
         if (!$result) {
-            return false;
+            header("Location: /message/history/");
         }
-        return true;
-    }
-
-    //Удаление сообщения
-    public static function deleteMessage($id)
-    {
-        $id = intval($id);
-
-        $db = Db::getConnection();
-
-        $result = $db->query("DELETE FROM message WHERE `id` = $id");
-
-        if(!$result){
-            header("Location: /message/incoming/");
-            exit();
+        $messageList = array();
+        $i = 0;
+        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+            $messageList[$i] = $row;
+            $i++;
         }
-        return true;
-
+        return $messageList;
     }
 
 

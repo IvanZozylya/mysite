@@ -32,7 +32,7 @@
 
             <ul>
                 <?php if($user['id'] !=$userId) :?>
-                    <li><a href="/message/view/<?php echo $user['id'];?>">Написать сообщение</a></li>
+                    <a href="/message/view/<?php echo $user['id'];?>" class="btn btn-primary">Написать сообщение</a>
                 <?php endif;?>
                 <?php if ($user['id'] == $userId) : ?>
                     <?php if ($user['role'] == 1) : ?>
