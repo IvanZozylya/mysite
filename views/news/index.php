@@ -1,7 +1,7 @@
 <?php include_once ROOT . "/views/layouts/header.php"; ?>
 
     <div class="text-center">
-        <h1>Роздел новостей</h1>
+        <h1 class="btn-primary">Роздел новостей</h1>
     </div>
 
     <div class="container">
