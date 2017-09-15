@@ -1,39 +1,41 @@
-<?php include ROOT . '/views/layouts/header.php'; ?>
-
-    <section>
-        <div class="container">
-            <div class="row">
-
-                <div class="col-sm-4 col-sm-offset-4 padding-right">
-
-                    <?php if($result): ?>
-                        <h2>Вы зарегистрированы!</h2>
-                    <?php else: ?>
-                        <?php if(isset($errors)&&is_array($errors)): ?>
-                            <ul>
-                                <?php foreach ($errors as $error): ?>
-                                    <li> - <?php echo $error; ?></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        <?php endif; ?>
-
-
-                        <div class="signup-form"><!--sign up form-->
-                            <h2>Регистрация на сайте</h2>
-                            <form action="#" method="post">
-                                <input type="text" class="form-control" name="name" placeholder="Имя" value="<?php echo $name; ?>"/>
-                                <input type="email" class="form-control" name="email" placeholder="E-mail" value="<?php echo $email; ?>"/>
-                                <input type="password" class="form-control" name="password" placeholder="Пароль" value="<?php echo $password; ?>"/>
-                                <input type="submit" name="submit" class="btn btn-success" value="Регистрация" />
-                            </form>
-                        </div><!--/sign up form-->
-                    <?php endif; ?>
-
-                    <br/>
-                    <br/>
-                </div>
-            </div>
+<?php require_once ROOT . '/views/layouts/header.php'; ?>
+<div class="register">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/template/css/style.css">
+    <div class="login">
+        <?php if ($result): ?>
+            <h2>Вы зарегистрированы!</h2>
+        <?php else: ?>
+            <?php if (isset($errors) && is_array($errors)): ?>
+                    <?php for ($i = 0; $i < count($errors); $i++) : ?>
+                        <div class="text-center"><?php echo ($i + 1) . '.' . $errors[$i];
+                            echo "<br>"; ?></div>
+                    <?php endfor; ?>
+            <?php endif; ?>
+        <div class="login-header">
+            <h1>Регистрация на сайте</h1>
         </div>
-    </section>
+        <div class="login-form">
+            <form action="" method="post">
+                <h3>Username:</h3>
+                <input type="text" name="name" placeholder="Username" value="<?php echo $name; ?>"/><br>
+                <h3>Email:</h3>
+                <input type="email" name="email" placeholder="Email" value="<?php echo $email; ?>"/><br>
+                <h3>Password:</h3>
+                <input type="password" name="password" placeholder="Password" value="<?php echo $password; ?>"/>
+                <br>
+                <input type="submit" name="submit" value="Register" class="login-submit"/>
+                <br>
+            </form>
+        </div>
+        <?php endif; ?>
+    </div>
+    <br>
+    <br>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
 
-<?php include ROOT . '/views/layouts/footer.php'; ?>
+    <script src="/template/js/index.js"></script>
+</div>
+<?php require_once ROOT . '/views/layouts/footer.php'; ?>
+

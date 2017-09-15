@@ -1,26 +1,24 @@
 <title>Кабинет</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
-<?php if (isset($_SERVER['HTTP_REFERER'])) :?>
-
-    <?php if ($_SERVER['HTTP_REFERER'] == "http://localhost/otherUsers/") : ?>
-        <div><a href="/otherUsers/"><h4>Вернуться</h4></a></div>
-    <?php endif; ?>
-
-    <?php if ($_SERVER['HTTP_REFERER'] == "http://localhost/search") : ?>
-        <div><a href="/search"><h4>Вернуться</h4></a></div>
-    <?php endif; ?>
-<?php endif; ?>
-
-<section>
+<section class="register">
     <div class="container">
         <div class="row">
-            <h1>Кабинет пользователя</h1>
+            <h1 class="text-center">Кабинет пользователя</h1>
 
             <?php if ($user['id'] == $userId) : ?>
-                <h3>Привет, <?php echo $user['name']; ?>!</h3>
+                <h2>Привет, <b style="color: maroon"><?php echo $user['name']; ?>!</b></h2>
+                <br>
             <?php endif; ?>
+                <?php if ($user['id'] == $userId) : ?>
+                    <?php if ($user['role'] == 1) : ?>
+                        <h3 class="btn btn-primary register"><a href="/admin/" style="color: maroon">Admin Panel</a></h3><br>
+                    <?php endif; ?>
+                    <h3 class="btn btn-primary register"><a href="/message/incoming/" style="color: maroon">Сообщения</a></h3><br>
+                    <h3 class="btn btn-primary register"><a href="/otherUsers/" style="color: maroon">Другие пользователи</a></h3><br>
+                    <h3 class="btn btn-primary register"><a href="/cabinet/edit/" style="color: maroon">Редактировать данные</a></h3><br>
+                <?php endif; ?>
             <?php if ($user['online'] == 1) : ?>
-                <h3>User: <b class="btn-success">
+                <h3 class="pull-right">User: <b class="btn-success">
                         <?php echo $user['name']; ?>
                     </b>
                 </h3>
@@ -29,19 +27,9 @@
                 <h3>User: <b class="btn-danger"><?php echo $user['name']; ?></b></h3><p>Был в
                     сети: <?php echo $user['date']; ?></p>
             <?php endif; ?>
-
-            <ul>
-                <?php if($user['id'] !=$userId) :?>
-                    <a href="/message/view/<?php echo $user['id'];?>" class="btn btn-primary">Написать сообщение</a>
-                <?php endif;?>
-                <?php if ($user['id'] == $userId) : ?>
-                    <?php if ($user['role'] == 1) : ?>
-                        <li><a href="/admin/">Admin Panel</a></li>
-                    <?php endif; ?>
-                    <li><a href="/message/incoming/">Сообщения</a></li>
-                    <li><a href="/otherUsers/">Другие пользователи</a></li>
-                    <li><a href="/cabinet/edit/">Редактировать данные</a></li>
-                <?php endif; ?>
+            <?php if($user['id'] !=$userId) :?>
+                <a href="/message/view/<?php echo $user['id'];?>" class="btn btn-primary">Написать сообщение</a>
+            <?php endif;?>
         </div>
         <?php if ($user['role'] != 1) : ?>
             <?php if ($userId == 13) : ?>
@@ -69,8 +57,13 @@
                 <?php endif; ?>
             <?php endif; ?>
         <?php endif; ?>
-        </ul>
+
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
+
 </section>
 <script>
     $("document").ready(function () {

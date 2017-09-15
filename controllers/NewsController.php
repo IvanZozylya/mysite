@@ -54,7 +54,7 @@ class NewsController
         $commentsList = CommentsNews::getCommentsNewsList($id, $page);
 
         //Получить всех пользователей
-        $users = User::getUsers();
+        $users = User::UsersAll();
 
         //получаем количество комментарий новости
         $total = CommentsNews::getCountCommentsNewsItem($id);

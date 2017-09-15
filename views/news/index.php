@@ -14,17 +14,17 @@
         </div>
     </div>
 
-    <div>
+    <div class="label-danger text-center">
         <?php foreach ($newsList as $news): ?>
-            <div class="btn-default">
+            <div class="register btn-primary alert">
                 <a href="/news/<?php echo $news['id']; ?>">
                     <h4><img src="<?php echo $news['image']; ?>" alt="" width="60" height="50">
                         <?php echo $news['title']; ?>
                         <?php if (isset($user)) : ?>
                             <?php if ($user['role'] == 1) : ?>
                                 <ul class="pull-right">
-                                    <li><a href="/news/edit/<?php echo $news['id']; ?>">Редактировать</a></li>
-                                    <li><a href="/news/delete/<?php echo $news['id']; ?>" class="conf">Удалить</a></li>
+                                    <li><a href="/news/edit/<?php echo $news['id']; ?>"style="color: black">Редактировать</a></li>
+                                    <li><a href="/news/delete/<?php echo $news['id']; ?>" class="conf" style="color: black">Удалить</a></li>
                                 </ul>
                             <?php endif; ?>
                         <?php endif; ?>

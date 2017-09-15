@@ -492,7 +492,7 @@ class ForumController
         $commentsList = CommentsForum::getCommentsItem($categoryId, $page);
 
         //Получить всех пользователей
-        $users = User::getUsers();
+        $users = User::UsersAll();
 
         // получаем идентификатор сессии,
         if (isset($_SESSION['user'])) {
@@ -557,6 +557,7 @@ class ForumController
 
         //Проверка статуса пользователя на возможность видеть форму
         $identification2 = User::identificationUsers();
+
         require_once ROOT . '/views/forum/item.php';
         return true;
     }
