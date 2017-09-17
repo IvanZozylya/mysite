@@ -1,4 +1,3 @@
-<title>Другие пользователи</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 <a href="/otherUsers/"><h3 class="btn btn-success">Всего пользователей : <?php echo $total;?></h3></a>
 <div class="">

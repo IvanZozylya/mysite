@@ -1,4 +1,3 @@
-<title>Добавление категории</title>
 <?php require_once ROOT . '/views/layouts/header.php' ?>
 <?php if ($result): ?>
     <h2>Категория была добавлена!</h2>

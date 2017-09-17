@@ -1,4 +1,3 @@
-<title>Блокировка пользователей</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 
 <?php if (isset($_SERVER['HTTP_REFERER'])) : ?>

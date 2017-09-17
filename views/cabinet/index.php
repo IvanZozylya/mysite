@@ -1,4 +1,3 @@
-<title>Кабинет</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 <section class="register">
     <div class="container">

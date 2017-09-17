@@ -1,4 +1,3 @@
-<title>Удаление пользователей</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 <div class="register">
 <h1 class="text-center btn-primary">Удаление пользователей</h1>

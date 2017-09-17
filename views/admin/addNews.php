@@ -1,4 +1,3 @@
-<title>Добавление новости</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 <?php if($result): ?>
     <h2>Новость была добавлена!</h2>

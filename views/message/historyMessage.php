@@ -1,4 +1,3 @@
-<title>История сообщений</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 <h2 class="btn-primary">История сообщении</h2>
 <div class="container">

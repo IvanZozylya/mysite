@@ -1,4 +1,3 @@
-<title>Ожидающие добавления</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 <div class="register">
 <?php if($result == true) :?>

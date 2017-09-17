@@ -1,4 +1,4 @@
-<title>Форум</title>
+
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 
 <div class="text-center">

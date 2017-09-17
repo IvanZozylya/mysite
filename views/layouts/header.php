@@ -5,10 +5,7 @@ if (isset($_SESSION['user'])) {
     $userId = $_SESSION['user'];
     $getUserAdmin = User::getUserById($userId);
 }
-//if(isset($_SESSION['user']) && ($getUserAdmin['online']) == 0){
-//    header("Location: /user/logout");
-//    exit();
-//}
+$title_arr = include(ROOT . '/config/title.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -16,7 +13,16 @@ if (isset($_SESSION['user'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Cybersport</title>
+    <title>
+        <?php
+        //Получаем title нужной странички
+        foreach ($title_arr as $key => $value) {
+            if (preg_match("~$key~", $_SERVER['REQUEST_URI'])) {
+                echo $value;
+                break;
+            }
+        } ?>
+    </title>
     <!-- Animate.css -->
     <link rel="stylesheet" href="/template/css/animate.css">
     <!-- Icomoon Icon Fonts-->

@@ -1,0 +1,26 @@
+<?php
+
+return array(
+    '/cabinet/[0-9]+'=>'Кабинет',
+    '/cabinet/edit/'=>'Редактирование данных',
+    '/news'=>'Новости',
+    '/forum'=>'Форум',
+    '/contact'=>'Обратная связь',
+    '/otherUsers/'=>'Другие пользователи',
+    '/message/incoming/'=>'Входящие сообщения',
+    '/message/history/'=>'История сообщений',
+    '/category/[0-9]+'=>'Роздел форума',
+    '/user/login/'=>'Авторизация',
+    '/user/register/'=>'Регистрация на сайте',
+    '/admin/'=>'Admin panel',
+    '/users/allFunctions/'=>'Users operations',
+    '/user/online/1'=>'Online',
+    '/user/online/0'=>'Offline',
+    '/user/block/0'=>'Активные пользователи',
+    '/user/block/2'=>'Заблокированные пользователи',
+    '/user/delete'=>'Удаление пользователей',
+    '/addCategoryWait'=>'Ожидающие добавления',
+    '/addNews'=>'Добавление новости',
+    '/addCategory'=>'Добавление категории',
+    '/'=>'Главная страница',
+);

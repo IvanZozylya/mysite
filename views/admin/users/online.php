@@ -1,4 +1,3 @@
-<title>Online</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 <div class="register text-center">
     <div class="row">

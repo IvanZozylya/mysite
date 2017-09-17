@@ -1,4 +1,3 @@
-<title>Admin Panel</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 <div class="text-center btn-primary register"><h2>Admin Panel:</h2></div>
 <div class="register">

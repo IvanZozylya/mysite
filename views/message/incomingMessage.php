@@ -1,4 +1,3 @@
-<title>Входящие сообщения</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
 <h2 class="btn-primary">Входящие сообщения</h2>
 <div class="container">

@@ -1,4 +1,3 @@
-<title>Обратная связь</title>
 <?php include ROOT . '/views/layouts/header.php'; ?>
 <div class="register">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
