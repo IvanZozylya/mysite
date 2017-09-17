@@ -36,8 +36,8 @@
             </ul>
             <?php endforeach; ?>
         <?php endif; ?>
-    <div class="signup-form register">
-        <h2 class="register text-center">Добавление комментариев</h2>
+    <div class="register text-center">
+        <h2 class="register text-center"><b class="fa fa-comment" aria-hidden="true">Добавление комментариев</b></h2>
         <form action="#" method="post" class="text-center">
             <input type="datetime" class="hidden" name="date" placeholder="Имя" value="<?php echo $date;?>"/>
             <input type="text" class="hidden" name="current_user_id" placeholder="Пароль" value="<?php echo $userId?>"/>
@@ -48,6 +48,9 @@
         </form>
     </div>
 <?php endif;?>
+<div class="col-md-4 col-md-offset-4">
+    <?php echo $pagination->get(); ?>
+</div>
 <script>
     $("document").ready(function () {
         $(".conf").click(function () {
@@ -63,7 +66,5 @@
     })
 </script>
 
-    <div class="col-md-4 col-md-offset-4">
-        <?php echo $pagination->get(); ?>
-    </div>
+
 <?php include_once ROOT . '/views/layouts/footer.php'; ?>

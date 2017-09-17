@@ -24,7 +24,7 @@
                 <h3>Password:</h3>
                 <input type="password" name="password" placeholder="Password" value="<?php echo $password; ?>"/>
                 <br>
-                <input type="submit" name="submit" value="Register" class="login-submit"/>
+                <input type="submit" name="submit"  style="color: black;background-color: orangered" value="Register" class="login-submit"/>
                 <br>
             </form>
         </div>

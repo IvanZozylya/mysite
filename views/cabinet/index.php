@@ -10,24 +10,24 @@
             <?php endif; ?>
                 <?php if ($user['id'] == $userId) : ?>
                     <?php if ($user['role'] == 1) : ?>
-                        <h3 class="btn btn-primary register"><a href="/admin/" style="color: maroon">Admin Panel</a></h3><br>
+                        <h3 class="btn btn-primary register"><a href="/admin/" style="color: maroon" class="fa fa-user-secret"> Admin Panel</a></h3><br>
                     <?php endif; ?>
-                    <h3 class="btn btn-primary register"><a href="/message/incoming/" style="color: maroon">Сообщения</a></h3><br>
-                    <h3 class="btn btn-primary register"><a href="/otherUsers/" style="color: maroon">Другие пользователи</a></h3><br>
-                    <h3 class="btn btn-primary register"><a href="/cabinet/edit/" style="color: maroon">Редактировать данные</a></h3><br>
+                    <h3 class="btn btn-primary register"><a href="/message/incoming/" style="color: maroon" class="fa fa-comments"> Сообщения</a></h3><br>
+                    <h3 class="btn btn-primary register"><a href="/otherUsers/" style="color: maroon" class="fa fa-users"> Другие пользователи</a></h3><br>
+                    <h3 class="btn btn-primary register"><a href="/cabinet/edit/" style="color: maroon" class="fa fa-pencil"> Редактировать данные</a></h3><br>
                 <?php endif; ?>
             <?php if ($user['online'] == 1) : ?>
-                <h3 class="pull-right">User: <b class="btn-success">
+                <h3 class="pull-right"><i class="fa fa-user" aria-hidden="true">User:</i> <b class="btn-success">
                         <?php echo $user['name']; ?>
                     </b>
                 </h3>
 
             <?php elseif ($user['online'] == 0) : ?>
-                <h3>User: <b class="btn-danger"><?php echo $user['name']; ?></b></h3><p>Был в
+                <h3><i class="fa fa-user" aria-hidden="true">User:</i> <b class="btn-danger"><?php echo $user['name']; ?></b></h3><p>Был в
                     сети: <?php echo $user['date']; ?></p>
             <?php endif; ?>
             <?php if($user['id'] !=$userId) :?>
-                <a href="/message/view/<?php echo $user['id'];?>" class="btn btn-primary">Написать сообщение</a>
+                <a href="/message/view/<?php echo $user['id'];?>" class="btn btn-primary icon-message"> Написать сообщение</a>
             <?php endif;?>
         </div>
         <?php if ($user['role'] != 1) : ?>

@@ -8,11 +8,11 @@
             <p class="h3">Сообщение отправлено! Мы ответим Вам на указанный email.</p>
         <?php else: ?>
         <?php if (isset($errors) && is_array($errors)): ?>
-            <ul>
+
                 <?php foreach ($errors as $error): ?>
-                    <li> - <?php echo $error; ?></li>
+                    <div class="text-center"> - <?php echo $error; ?></div>
                 <?php endforeach; ?>
-            </ul>
+
         <?php endif; ?>
 
         <div class="login-header">
@@ -26,7 +26,7 @@
                 <h3>Сообщение:</h3>
                 <input type="text" name="userText" placeholder="Message" value="<?php echo $userText; ?>"/>
                 <br>
-                <input type="submit" name="submit" value="Отправить" class="login-submit"/>
+                <input type="submit" name="submit" value="Go" style="background-color: orangered;color: black" class="login-submit"/>
                 <br>
             </form>
         </div>

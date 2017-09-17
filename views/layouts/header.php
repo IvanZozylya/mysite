@@ -5,7 +5,6 @@ if (isset($_SESSION['user'])) {
     $userId = $_SESSION['user'];
     $getUserAdmin = User::getUserById($userId);
 }
-$title_arr = include(ROOT . '/config/title.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -15,13 +14,14 @@ $title_arr = include(ROOT . '/config/title.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         <?php
-        //Получаем title нужной странички
+        //Получаем title нужной страницы
+        $title_arr = include(ROOT . '/config/title.php');
         foreach ($title_arr as $key => $value) {
             if (preg_match("~$key~", $_SERVER['REQUEST_URI'])) {
                 echo $value;
                 break;
             }
-        } ?>
+        };?>
     </title>
     <!-- Animate.css -->
     <link rel="stylesheet" href="/template/css/animate.css">
@@ -39,7 +39,7 @@ $title_arr = include(ROOT . '/config/title.php');
 
     <!-- Theme style  -->
     <link rel="stylesheet" href="/template/css/style.css">
-
+    <!--JQuery-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <!-- Modernizr JS -->
     <script src="/template/js/modernizr-2.6.2.min.js"></script>
@@ -47,14 +47,14 @@ $title_arr = include(ROOT . '/config/title.php');
     <!--[if lt IE 9]>
     <script src="/template/js/respond.min.js"></script>
     <![endif]-->
+    <link rel="stylesheet" href="/template/fonts/font-awesome-4.7.0/css/font-awesome.css">
     <!--обновление счетчика онлайн каждые 15минут-->
     <script>
         var timerId = setInterval(function () {
             $.post("/views/site/offlineRedactor.php", {armagedon: "Ok"});
 
-        }, 900000);
+        }, 300000);
     </script>
-
 </head>
 <body>
 
@@ -68,9 +68,11 @@ $title_arr = include(ROOT . '/config/title.php');
                     <div class="col-xs-12 text-right">
                         <p class="num">Call: +38 063 510 6747</p>
                         <ul class="fh5co-social">
-                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                            <li><a href="#"><i class="icon-dribbble"></i></a></li>
-                            <li><a href="#"><i class="icon-github"></i></a></li>
+                            <li><a href="https://www.instagram.com/ivan_zozik/?hl=ru" target="_blank"><i class="icon-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100008807071446" target="_blank"><i class="icon-facebook"></i></a></li>
+                            <li><a href="https://vk.com/krytoinoll" target="_blank"><i class="icon-vk"></i></a></li>
+                            <li><a href="mailto:zozyle94@gmail.com" target="_blank"><i class="icon-email"></i></a></li>
+                            <li><a href="https://github.com/IvanZozylya" target="_blank"><i class="icon-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -84,17 +86,17 @@ $title_arr = include(ROOT . '/config/title.php');
                     </div>
                     <div class="col-xs-10 text-right menu-1">
                         <ul>
-                            <li class="col-sm-3"><a href="/">Главная</a></li>
-                            <li class="col-sm-1"><a href="/news">Новости</a></li>
-                            <li class="col-sm-2"><a href="/forum">Форум</a></li>
-                            <li class="col-sm-1"><a href="/contact">Связь</a></li>
-                            <li><a href="#" style="color: #2aabd2;">Онлайн: <b><?php echo $online; ?></b></a></li>
+                            <li class="col-sm-3 icon-home" style="color: orangered"><a href="/">Главная</a></li>
+                            <li class="col-sm-1 icon-news" style="color: orangered"><a href="/news">Новости</a></li>
+                            <li class="col-sm-2 icon-chat" style="color: orangered"><a href="/forum">Форум</a></li>
+                            <li class="col-sm-1 icon-message" style="color: orangered"><a href="/contact">Связь</a></li>
+                            <li><a href="#" style="color: green"><i class="icon-users fa-2x" aria-hidden="true"></i> <b><?php echo $online; ?></b></a></li>
                             <?php if (User::isGuest()) : ?>
-                                <li class="nav navbar-nav navbar-right"><a href="/user/register/">Регистрация</a></li>
-                                <li class="nav navbar-nav navbar-right"><a href="/user/login/">Вход</a></li>
+                                <li class="nav navbar-nav navbar-right"><a href="/user/register/" style="color: saddlebrown"><i class="fa fa-registered fa-2x" aria-hidden="true"></i></a></li>
+                                <li class="nav navbar-nav navbar-right"><a href="/user/login/" style="color: green"><i class="fa fa-sign-in fa-2x" aria-hidden="true"></i></a></li>
                             <?php else : ?>
-                                <li class="nav navbar-nav navbar-right"><a href="/user/logout/">Выход</a></li>
-                                <li class="nav navbar-nav navbar-right"><a href="/cabinet/<?php echo $userId; ?>">Кабинет</a>
+                                <li class="nav navbar-nav navbar-right"><a href="/user/logout/" style="color: darkslateblue"><i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a></li>
+                                <li class="nav navbar-nav navbar-right"><a href="/cabinet/<?php echo $userId; ?>" style="color: blue"><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></a>
                                 </li>
                             <?php endif; ?>
                         </ul>
@@ -126,7 +128,7 @@ $title_arr = include(ROOT . '/config/title.php');
                     <?php endif; ?>
 
                     <?php if ($_SESSION['searchPage'] == "user") : ?>
-                        <select name="search" id="" class="btn">
+                        <select name="search" id="" class="btn btn-primary">
                             <option value="1" <?php if (!isset($_POST['bsearch'])) echo 'selected'; ?>>Любое слово
                             </option>
                             <?php if (isset($getUserAdmin) && ($getUserAdmin['role'] == 1)) : ?>

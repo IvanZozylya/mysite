@@ -19,7 +19,7 @@
 </div>
 
 <?php if($identification == true) :?>
-<h3 class="pull-right btn-default" ><a href="/comments/add/<?php echo $id?>">Добавить комментарий</a></h3>
+<h3 class="pull-right btn-default" ><a href="/comments/add/<?php echo $id?>"><b class="btn btn-primary">Добавить комментарий <i class="fa fa-commenting" aria-hidden="true"></i></b></a></h3>
 <?php else : ?>
 <h4 class="pull-right btn-default">Внимание! Только зарегистрированные пользователи могут оставлять комментарии.</h4>
 <?php endif;?>

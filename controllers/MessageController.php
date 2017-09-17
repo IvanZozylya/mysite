@@ -57,7 +57,7 @@ class MessageController
             if ($errors == false) {
                 $goMessage = Message::goMessage($userFrom, $userTo, $text, $data);
                 $result = true;
-                header("Refresh:1 url=/message/view/$messageId/");
+                header("Location: /message/view/$messageId/");
 
 
             }

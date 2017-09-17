@@ -25,7 +25,7 @@
                         <input type="password" class="form-control" name="password" placeholder="Пароль"
                                value="<?php echo $password; ?>"/>
                         <br/>
-                        <input type="submit" name="submit" class="btn btn-primary login-submit" value="Go"/>
+                        <input type="submit" name="submit" style="background-color: orangered; color: black" class="login-submit" value="Go"/>
                         <br>
                     </form>
                 </div>

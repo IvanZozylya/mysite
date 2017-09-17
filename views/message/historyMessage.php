@@ -1,15 +1,15 @@
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
-<h2 class="btn-primary">История сообщении</h2>
+<h2 class="btn-primary">История сообщений</h2>
+<div class="register">
 <div class="container">
     <div class="row">
         <div class="col-sm-offset-0 padding-right">
-            <ul>
-                <li><a href="/cabinet/<?php echo $userId; ?>/">Моя страница</a></li>
+            <h3 class="btn btn-primary register"><a href="/cabinet/<?php echo $userId; ?>/" class="icon-home" style="color: maroon"> Home</a></h3><br>
 
-                <li><a href="/message/incoming/">Входящие(<?php echo $countNew; ?>)</a></li>
+            <h3 class="btn btn-primary register"><a href="/message/incoming/" style="color: maroon" class="fa fa-envelope"> Входящие(<?php echo $countNew; ?>)</a></h3><br>
 
-                <li><a href="/message/history/">История сообщений</a></li>
-            </ul>
+            <h3 class="btn btn-primary register"><a href="/message/history/" style="color: maroon" class="fa fa-envelope-open"> История сообщений</a></h3>
+
         </div>
     </div>
 </div>
@@ -19,13 +19,13 @@
         <option value="2" <?php if ($_SESSION['message'] == 'send') echo 'selected'; ?>>Отправление
         </option>
     </select>
-    <input type="submit" name="submit" value="Получить">
+    <input type="submit" name="submit" class="login-submit btn btn-primary" value="Получить">
 </form>
 <?php if (empty($message)) : ?>
-    <h3>Здесь пусто!</h3>
+    <h2 class="text-center">Здесь пусто!</h2>
 <?php else: ?>
     <?php if ($_SESSION['message'] == 'send') : ?>
-        <h3 class="text-center btn-default">Список Отправленных сообщений</h3>
+        <h3 class="text-center btn-primary">Список Отправленных сообщений</h3>
         <table class=" table table-bordered">
             <tr>
                 <td><b>Сообщение:</b></td>
@@ -35,15 +35,15 @@
             <?php foreach ($message as $messageItem): ?>
                 <tr>
                     <td>
-                        <?php echo $messageItem['text']; ?>
+                        <i class="fa fa-comment" style="color: orangered"></i> <b style="color: black"><?php echo $messageItem['text']; ?></b>
                     </td>
                     <td>
-                        <?php echo $messageItem['date']; ?>
+                        <i class="fa fa-calendar"> <?php echo $messageItem['date']; ?></i>
                     </td>
                     <?php foreach ($users as $user) : ?>
                         <?php if ($user['id'] == $messageItem['userTo']) : ?>
                             <td>
-                                <a href="/cabinet/<?php echo $user['id'];?>"><?php echo $user['name']; ?></a>
+                                <a href="/cabinet/<?php echo $user['id'];?>" class="fa fa-user" style="color: maroon"> <?php echo $user['name']; ?></a>
                             </td>
                         <?php endif; ?>
                     <?php endforeach; ?>
@@ -54,7 +54,7 @@
             <?php echo $pagination->get(); ?>
         </div>
     <?php else: ?>
-        <h3 class="text-center btn-default">Список Полученных сообщений</h3>
+        <h3 class="text-center btn-primary">Список Полученных сообщений</h3>
         <table class=" table table-bordered">
             <tr>
                 <td><b>Сообщение:</b></td>
@@ -64,15 +64,15 @@
             <?php foreach ($message as $messageItem): ?>
                 <tr>
                     <td>
-                        <?php echo $messageItem['text']; ?>
+                        <i class="fa fa-comment" style="color: orangered"></i> <b style="color: black"><?php echo $messageItem['text']; ?></b>
                     </td>
                     <td>
-                        <?php echo $messageItem['date']; ?>
+                        <i class="fa fa-calendar"> <?php echo $messageItem['date']; ?></i>
                     </td>
                     <?php foreach ($users as $user) : ?>
                         <?php if ($user['id'] == $messageItem['userFrom']) : ?>
                             <td>
-                                <a href="/cabinet/<?php echo $user['id'];?>"><?php echo $user['name']; ?></a>
+                                <a href="/cabinet/<?php echo $user['id'];?>" class="fa fa-user" style="color: maroon"> <?php echo $user['name']; ?></a>
                             </td>
                         <?php endif; ?>
                     <?php endforeach; ?>
@@ -84,5 +84,6 @@
         </div>
     <?php endif; ?>
 <?php endif; ?>
-
+    <br>
+</div>
 <?php require_once ROOT . '/views/layouts/footer.php'; ?>

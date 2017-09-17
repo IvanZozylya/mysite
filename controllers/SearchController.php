@@ -6,7 +6,7 @@ class SearchController
     public function actionSearch($params = false)
     {
         #ПРОВЕРКА на существование
-        if($params == true){
+        if ($params == true) {
             header("Location: /search");
             exit();
         }
@@ -14,8 +14,10 @@ class SearchController
         $results = false;
         $pageCategory = false;
 
-        $userId = $_SESSION['user'];
-        $user = User::getUserById($userId);
+        if (isset($_SESSION['user'])) {
+            $userId = $_SESSION['user'];
+            $user = User::getUserById($userId);
+        }
         //задаем имя в конечном результате при поиске
         if ($_SESSION['searchPage'] == "news") {
             $pageCategory = "по новостям";
