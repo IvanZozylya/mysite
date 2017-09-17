@@ -1,7 +1,7 @@
 <title>Удаление пользователей</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
-<div><a href="/users/allFunctions/"><h4>Вернуться</h4></a></div>
-<h1 class="text-center btn-default">Удаление пользователей</h1>
+<div class="register">
+<h1 class="text-center btn-primary">Удаление пользователей</h1>
 <h3 class="text-center">Кол-во пользователей: <b class="btn-default"><?php echo $total;?></b></h3>
 <div class="text-center">
     <h4>Удалить пользователя по <b>id</b></h4>
@@ -21,6 +21,7 @@
 </div>
 <div class="col-md-4 col-md-offset-4">
     <?php echo $pagination->get(); ?>
+</div>
 </div>
 <script>
     $("document").ready(function () {

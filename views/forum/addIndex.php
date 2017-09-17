@@ -1,6 +1,5 @@
 <title>Добавление категории</title>
 <?php require_once ROOT . '/views/layouts/header.php' ?>
-<div><a href="/forum"><h4>Вернуться</h4></a></div>
 <?php if($result): ?>
     <h3>Категория была отправлена на рассмотрение админу, ожидайте!</h3>
 <?php else: ?>
@@ -12,15 +11,15 @@
         </ul>
     <?php endif; ?>
     <div class="signup-form">
-        <h2>Добавление Категории</h2>
-        <form action="#" method="post" enctype="multipart/form-data">
+        <h2 class="btn-primary text-center">Добавление Категории</h2>
+        <form action="#" method="post" enctype="multipart/form-data" class="register">
             <input type="datetime" class="hidden" name="date" placeholder="Имя" value="<?php echo $date;?>"/>
-            <label for="title">Заголовок:  </label><br>
+            <label for="title" style="color: black;">Заголовок:  </label><br>
             <input type="text" name="title" id="title" value="<?php if(isset($_POST['submit']))echo $_POST['title']?>"><br>
-            <label for="short_content">Содержимое: </label><br>
+            <label for="short_content" style="color: black;">Содержимое: </label><br>
             <textarea name="short_content"  cols="40" rows="10" id="short_content" ><?php if(isset($_POST['submit']))echo $_POST['short_content']?></textarea><br>
-            <input type="hidden" name="MAX_FILE_SIZE" value="120000" />
-            <input type="file" name="userfile"  accept="image/png" id="">
+            <input type="hidden" name="MAX_FILE_SIZE" value="120000"/>
+            <input type="file" name="userfile"  accept="image/png" id="" style="color: black;">
             <input type="submit" name="submit" class="btn btn-success" value="Добавить" />
         </form>
     </div>

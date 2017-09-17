@@ -1,9 +1,8 @@
 <title>Другие пользователи</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
-<div><a href="/cabinet/<?php echo $userId;?>"><h4>Вернуться</h4></a></div>
 <a href="/otherUsers/"><h3 class="btn btn-success">Всего пользователей : <?php echo $total;?></h3></a>
 <div class="">
-    <table border="1" class="col-sm-4 col-sm-offset-4 padding-right text-center">
+    <table  class="table table-bordered" border="1" class="col-sm-4 col-sm-offset-4 padding-right text-center">
     <?php foreach ($allUsers as $users) : ?>
         <tr>
             <td style="padding: 10px"><a href="/cabinet/<?php echo $users['id']; ?>"><i class="btn btn-default">

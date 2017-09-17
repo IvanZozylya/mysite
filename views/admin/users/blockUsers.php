@@ -5,11 +5,9 @@
     <?php if ($_SERVER['HTTP_REFERER'] == "http://localhost/search") : ?>
         <div><a href="/search"><h4>Вернуться</h4></a></div>
     <?php endif; ?>
-<?php else: ?>
-<div><a href="/users/allFunctions/"><h4>Вернуться</h4></a></div>
 <?php endif; ?>
 
-<div class="container">
+<div class="register text-center">
     <div class="row otstup">
         <div class="col-md-2"></div>
         <div class="col-md-8">

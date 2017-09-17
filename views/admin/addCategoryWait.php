@@ -1,6 +1,6 @@
 <title>Ожидающие добавления</title>
 <?php require_once ROOT . '/views/layouts/header.php'; ?>
-<div><a href="/admin"><h4>Вернуться</h4></a></div>
+<div class="register">
 <?php if($result == true) :?>
 <h3>Категория успешно добавлена!</h3>
 <?php else: ?>
@@ -34,7 +34,10 @@
 </ul>
 <?php endforeach;?>
 <?php endif?>
-
+    <br>
+    <br>
+    <br>
+</div>
 <script>
     $("document").ready(function () {
         $(".conf").click(function () {

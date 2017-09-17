@@ -77,4 +77,5 @@
         <?php endforeach; ?>
     </table>
 <?php endif; ?>
+<br>
 <?php require_once ROOT . '/views/layouts/footer.php'; ?>
