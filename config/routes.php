@@ -33,10 +33,13 @@ return array(
     'user/block/([0-9]+)/page-([0-9]+)' => 'admin/blockUsers/$1/$2',
     'user/block/([0-9]+)' => 'admin/blockUsers/$1',
     'user/delete/page-([0-9]+)' => 'admin/deleteUser/$1',
+    'user/feedback/delete/([0-9]+)'=>'admin/deleteFeedbackItem/$1',
     'user/delete' => 'admin/deleteUser',
 
-
+    'users/feedback/page-([0-9]+)'=>'admin/feedback/$1',
+    'users/feedback'=>'admin/feedback',
     'users/allFunctions' => "admin/AllFunction",
+
 
     'message/delete/([0-9]+)/([0-9]+)/([0-9]+)'=>'message/deleteMessage/$1/$2/$3',
     'message/deleteChat/([0-9]+)' => 'message/deleteChat/$1',

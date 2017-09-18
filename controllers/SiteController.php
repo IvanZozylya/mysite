@@ -27,8 +27,12 @@ class SiteController
 
         if (isset($_POST['submit'])) {
 
-            $userEmail = $_POST['userEmail'];
-            $userText = $_POST['userText'];
+            $d = date("Y-m-d H:i:s");
+            $date = '\''.$d.'\'';
+
+            //Валидация входящей строки
+            $userEmail = User::cleanStr($_POST['userEmail']);
+            $userText = User::cleanStr($_POST['userText']);
 
             $errors = false;
 
@@ -37,7 +41,16 @@ class SiteController
                 $errors[] = 'Неправильный email';
             }
 
+            if(!User::checkPassword($userText)){
+                $errors[] = 'Введите не меньше 6 символов';
+            }
+
+            //если все ок
             if ($errors == false) {
+                //Если ошибок нет вносим данные на в таблицу feedback
+                $feedbackItem = Feedback::goFeedbackItem($userEmail,$userText);
+
+                //Если ошибок нет полученные данные на почту
                 $adminEmail = 'ivan.zozylya@gmail.com';
                 $message = "Текст: {$userText}. От {$userEmail}";
                 $subject = 'Тема письма';
@@ -46,6 +59,7 @@ class SiteController
                     'X-Mailer: PHP/' . phpversion();
                 $result = mail($adminEmail, $subject, $message, $headers);
                 $result = true;
+                header("Refresh:2 url=/");
             }
 
         }

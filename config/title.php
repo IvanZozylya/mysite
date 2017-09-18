@@ -14,6 +14,7 @@ return array(
     '/user/register/'=>'Регистрация на сайте',
     '/admin/'=>'Admin panel',
     '/users/allFunctions/'=>'Users operations',
+    '/users/feedback/'=>'Feedback',
     '/user/online/1'=>'Online',
     '/user/online/0'=>'Offline',
     '/user/block/0'=>'Активные пользователи',

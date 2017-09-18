@@ -6,7 +6,7 @@ class AdminController
     public function actionIndex($params = false)
     {
         #ПРОВЕРКА на существование
-        if($params == true){
+        if ($params == true) {
             header("Location: /admin/");
             exit();
         }
@@ -29,11 +29,81 @@ class AdminController
         return true;
     }
 
+    //страница Feedback
+    public function actionFeedback($page = 1, $params = false)
+    {
+        #ПРОВЕРКА на существование
+        if ($params == true) {
+            header("Location: /users/feedback/");
+            exit();
+        }
+
+        $_SESSION['searchPage'] = "user";
+        // Получаем идентификатор пользователя из сессии
+        $userId = User::checkLogged();
+
+        // Получаем информацию о пользователе из БД
+        $user = User::getUserById($userId);
+
+        //Проверка уровня допуска
+        if ($user['role'] != 1) {
+            header("Location: /cabinet/$userId");
+            exit();
+        }
+
+        //Получить все сообщения
+        $feedbackList = Feedback::getFeedbackList($page);
+
+        //Счетчик сообщений
+        $total = Feedback::getCountFeedback();
+
+        //Создаем обьект пагинатора
+        $pagination = new Pagination($total, $page, Feedback::SHOW_BY_DEFAULT, 'page-');
+
+
+        require_once ROOT . '/views/admin/feedback.php';
+        return true;
+    }
+
+    //Удаление записей из Feedback
+    public function actionDeleteFeedbackItem($id,$params = false)
+    {
+        #ПРОВЕРКА на существование
+        if ($params == true) {
+            header("Location: /users/feedback/");
+            exit();
+        }
+
+        $_SESSION['searchPage'] = "user";
+        // Получаем идентификатор пользователя из сессии
+        $userId = User::checkLogged();
+
+        // Получаем информацию о пользователе из БД
+        $user = User::getUserById($userId);
+
+        //Проверка уровня допуска
+        if ($user['role'] != 1) {
+            header("Location: /cabinet/$userId");
+            exit();
+        }
+
+        $deleteItem = Feedback::deleteFeedbackItem($id);
+        if($deleteItem == true){
+            header("Location: /users/feedback/");
+            return true;
+        }else{
+            header("Refresh:3 url=/users/feedback/");
+            return false;
+        }
+
+    }
+
+
     //Добавление новости
     public function actionAddNews($params = false)
     {
         #ПРОВЕРКА на существование
-        if($params == true){
+        if ($params == true) {
             header("Location: /addNews/");
             exit();
         }
@@ -98,14 +168,14 @@ class AdminController
 
                     //Обработка названия image
                     $img = basename($newsLast['image']);
-                    $imgArr = explode(".",$img);
+                    $imgArr = explode(".", $img);
                     $imageArr = array_pop($imgArr);
                     $image = strval($imageArr);
 
 
                     //Изменить название image
                     $oldname = ROOT . $newsLast['image'];
-                    $newname = ROOT . '/template/images/news/' . $newsLast['id'] . '.'.$image;
+                    $newname = ROOT . '/template/images/news/' . $newsLast['id'] . '.' . $image;
 
                     if (rename($oldname, $newname)) {
 
@@ -127,7 +197,7 @@ class AdminController
     public function actionAddCategory($params = false)
     {
         #ПРОВЕРКА на существование
-        if($params == true){
+        if ($params == true) {
             header("Location: /addCategory/");
             exit();
         }
@@ -224,7 +294,7 @@ class AdminController
     public function actionCategoryWait($params = false)
     {
         #ПРОВЕРКА на существование
-        if($params == true){
+        if ($params == true) {
             header("Location: /addCategoryWait/");
             exit();
         }
@@ -353,7 +423,7 @@ class AdminController
     public function actionAllFunction($params = false)
     {
         #ПРОВЕРКА на существование
-        if($params == true){
+        if ($params == true) {
             header("Location: /users/allFunctions/");
             exit();
         }
@@ -375,10 +445,10 @@ class AdminController
     }
 
 //Онлайн пользователи
-    public function actionOnline($categoryId, $page = 1,$params = false)
+    public function actionOnline($categoryId, $page = 1, $params = false)
     {
         #ПРОВЕРКА на существование
-        if($params == true){
+        if ($params == true) {
             header("Location: /user/online/1/");
             exit();
         }
@@ -407,10 +477,10 @@ class AdminController
     }
 
 //Блокировка пользователей
-    public function actionBlockUsers($role, $page = 1,$params = false)
+    public function actionBlockUsers($role, $page = 1, $params = false)
     {
         #ПРОВЕРКА на существование
-        if($params == true){
+        if ($params == true) {
             header("Location: /user/block/0/");
             exit();
         }
@@ -458,10 +528,10 @@ class AdminController
     }
 
 //Удаление пользователя
-    public function actionDeleteUser($page = 1,$params = false)
+    public function actionDeleteUser($page = 1, $params = false)
     {
         #ПРОВЕРКА на существование
-        if($params == true){
+        if ($params == true) {
             header("Location: /user/delete/");
             exit();
         }

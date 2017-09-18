@@ -1,4 +1,4 @@
-<footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(/template/images/site/img_bg_1.jpg);" role="contentinfo">
+<footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(/template/images/site/img_bg_1.jpg);height: 250px" role="contentinfo">
     <div class="overlay"></div>
     <div class="container">
         <div class="row copyright">
