@@ -18,6 +18,9 @@ class AdminController
         // Получаем информацию о пользователе из БД
         $user = User::getUserById($userId);
 
+        //Счетчик сообщений Feedback
+        $total = Feedback::getCountFeedback();
+
         //Проверка уровня допуска
         if ($user['role'] != 1) {
             header("Location: /cabinet/$userId");
@@ -87,7 +90,9 @@ class AdminController
             exit();
         }
 
+        #Удаляем запись
         $deleteItem = Feedback::deleteFeedbackItem($id);
+        //Если удаление успешно
         if($deleteItem == true){
             header("Location: /users/feedback/");
             return true;
@@ -97,7 +102,6 @@ class AdminController
         }
 
     }
-
 
     //Добавление новости
     public function actionAddNews($params = false)

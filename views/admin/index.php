@@ -5,7 +5,7 @@
         <br>
         <ul class="text-center">
             <li class="btn btn-primary register"><a href="/users/allFunctions/"><h4>Users</h4></a></li><br>
-            <li class="btn btn-primary register"><a href="/users/feedback/"><h4>Feedback()</h4></a></li><br>
+            <li class="btn btn-primary register"><a href="/users/feedback/"><h4>Feedback(<?php echo $total;?>)</h4></a></li><br>
             <li class="btn btn-primary register"><a href="/addNews"><h4>Добавление новостей на сайте</h4></a></li><br>
             <li class="btn btn-primary register"><a href="/addCategory"><h4>Добавление категории в роздел Форум</h4></a></li><br>
             <li class="btn btn-primary register"><a href="/addCategoryWait"><h4>Категории ожидающие добавления(<?php echo $countAddCategory;?>)</h4></a></li><br>
