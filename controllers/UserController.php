@@ -124,11 +124,13 @@ class UserController
         if($usId)
         $editDate = User::editDate($usId, $date);
 
+        ob_start();
         session_start();
         unset($_SESSION['user']);
         unset($_SESSION['message']);
 
         header("Location: /user/login/");
+        ob_end_clean();
     }
 
 
